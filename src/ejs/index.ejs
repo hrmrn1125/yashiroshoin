@@ -1,0 +1,45 @@
+<% var title = "TOP"; var description = "トップのdescription"; %>
+<% include src/ejs/template/_head %>
+<div class="l-wrap__contents">
+  <% include src/ejs/template/_header %>
+  <div class="l-contents">
+    <% include src/ejs/template/_sidebar %>
+    <main class="l-main">
+      <% var mainMenuData = [
+        {index: "spr_top01_01.png" , icon: "spr_top01_46.png" , title: "spr_top01_16.png" , text: "グッピーズは、人材採用をITで革新し続ける企業です" },
+        {index: "spr_top01_04.png" , icon: "spr_top01_48.png" , title: "spr_top01_19.png" , text: "グッピーズがご提供するOnly Oneサービスをご紹介" },
+        {index: "spr_top01_06.png" , icon: "spr_top01_50.png" , title: "spr_top01_21.png" , text: "グッピーズの最新ニュース、プレスリリース" },
+        {index: "spr_top01_08.png" , icon: "spr_top01_52.png" , title: "spr_top01_23.png" , text: "グッピーズではNo.1を目指す環境が整っています" },
+        {index: "spr_top01_10.png" , icon: "spr_top01_54.png" , title: "spr_top01_26.png" , text: "様々な情報をFacebookページで発信しています" },
+        {index: "spr_top01_12.png" , icon: "spr_top01_56.png" , title: "spr_top01_28.png" , text: "サービスに関するお問い合わせはこちらから" },
+        {index: "spr_top01_14.png" , icon: "spr_top01_58.png" , title: "spr_top01_31.png" , text: "医療・歯科・介護に特化した、日本で最初のNo.1求人転職サイト" },
+        {index: "spr_top01_14.png" , icon: "spr_top01_60.png" , title: "spr_top01_33.png" , text: "医療・歯科・介護の資格を目指す学生のための就職サイト" },
+        {index: "spr_top01_14.png" , icon: "spr_top01_62.png" , title: "spr_top01_35.png" , text: "人材募集で最も利用されているサービスのご利用はこちらから" },
+        {index: "spr_top01_14.png" , icon: "spr_top01_63.png" , title: "spr_top01_37.png" , text: "グッピーの無料転職相談は、無料以上の価値があります" },
+        {index: "spr_top01_14.png" , icon: "spr_top01_65.png" , title: "spr_top01_40.png" , text: "医師のアルバイト探しは、スマホ対応のDr.スポットで簡単検索" },
+        {index: "spr_top01_14.png" , icon: "spr_top01_66.png" , title: "spr_top01_43.png" , text: "ソーシャルリクルーティングはFacebookアプリ・Jinzで始めよう" }
+      ]; -%>
+      <div class="p-contents">
+        <ul class="p-contents__list">
+          <% mainMenuData.forEach(function(data) { %>
+          <li class="p-contents__box">
+            <a href="#" class="p-contents__item">
+              <p class="p-contents__index">
+                <img src="./assets/images/mainmenu/menu/<%= data.index %>" alt="">
+              </p>
+              <p class="p-contents__icon">
+                <img src="./assets/images/mainmenu/icon/<%= data.icon %>" alt="">
+              </p>
+              <p class="p-contents__title">
+                <img src="./assets/images/mainmenu/menu2/<%= data.title %>" alt="">
+              </p>
+              <p class="p-contents__text"><%= data.text %></p>
+            </a>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+    </main>
+  </div>
+</div>
+<% include src/ejs/template/_footer %>
