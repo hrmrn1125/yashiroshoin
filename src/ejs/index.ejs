@@ -1,18 +1,249 @@
 <% var title = "TOP"; var description = "トップのdescription"; %>
 <% include src/ejs/template/_head %>
-<div class="l-wrapper">
-  <% include src/ejs/template/_header %>
-  <div class="l-topHero">
-    <div class="l-topHero__background">
-      <img class="l-topHero__picture" src="" alt="生徒たち">
-      <div class="l-topHero__boarder"></div>
+
+<% var intro = [
+  {text: "ぐるりと360°学校紹介" , image: "bricks.jpg" },
+  {text: "英数特進コース紹介" , image: "bricks.jpg" },
+  {text: "進学コース紹介" , image: "bricks.jpg" },
+  {text: "国際コース紹介" , image: "bricks.jpg" }
+]; -%>
+
+<% include src/ejs/template/_header %>
+<main class="l-main">
+
+  <div class="p-topHero">
+    <div class="p-topHero__background">
+      <img class="p-topHero__picture" src="./assets/images/topHero.jpg" alt="生徒たち">
+      <div class="p-topHero__boarder"></div>
     </div>
-    <div class="l-topHero__eyecatch">
+    <div class="p-slider">
+      <ul class="p-slider__eyecatch">
+        <% intro.forEach(function(introduce) { %>
+        <li class="p-slider__item">
+          <a class="p-slider__link" href="#">
+            <div class="p-slider__picture">
+              <div class="p-slider__arrow"></div>
+              <img src="./assets/images/<%= introduce.image %>" alt="学校紹介">
+            </div>
+            <div class="p-slider__background">
+              <div class="p-slider__text">
+                <%= introduce.text %>
+              </div>
+            </div>
+          </a>
+        </li>
+        <% }); %>
+      </ul>
     </div>
   </div>
-  <div class="l-contents">
-    <main class="l-main">
-    </main>
+
+  <div class="p-contents__newsWrap">
+    <div class="p-contents__title">News</div>
+    <ul class="p-contents__news">
+      <li class="p-contents__headlinedi">
+        2021/12/1<br>やしろテレビ「きらり人☆」に出演
+      </li>
+      <li class="p-contents__">
+        2021/11/23<br>NSKBK1「喜劇のレッスン」に本校2年生が出演予定
+      </li>
+      <li class="p-contents__headline">
+        2021/10/13<br>11月・12月のオンライン入試説明会の申し込みについて
+      </li>
+      <li class="p-contents__headline">
+        2021/9/9<br>新型コロナウイルスへの対策について
+      </li>
+      <li class="p-contents__headline">
+        2021/9/1<br>YASHIRO SPECIAL STAGEのお知らせ
+      </li>
+    </ul>
+    <div class="p-contents__btn">News記事一覧</div>
   </div>
-</div>
+
+  <div class="p-contents__blogWrap">
+    <div class="p-contents__title">Blog</div>
+    <ul class="p-blog__index">
+      <li class="p-blog__category">すべて</li>
+      <li class="p-blog__category">YASHIRO Now</li>
+      <li class="p-blog__category">スポーツ系クラブ</li>
+      <li class="p-blog__category">文化系クラブ</li>
+    </ul>
+    <ul class="p-blog__list">
+      <li class="p-blog__contents">
+        <div class="p-blog__thumb"></div>
+        <div class="p-blog__inner">
+          <div class="p-blog__date">2021/12/1</div>
+          <div class="p-blog__tagList">
+            <div class="p-blog__tag">Blog</div>
+            <div class="p-blog__tag">YASHIRO Now</div>
+          </div>
+          <div class="p-blog__title">
+            Chromebookを活用した授業
+          </div>
+          <div class="p-blog__excerpt">
+            本校では、生徒へひとり1台Chromebookを配布しており、それを活用して毎日多様な学習を行っています。今回はその中から、1年生の英語の授業をご紹介します。…
+          </div>
+        </div>
+      </li>
+      <li class="p-blog__contents">
+        <div class="p-blog__thumb"></div>
+        <div class="p-blog__inner">
+          <div class="p-blog__date">2021/12/1</div>
+          <div class="p-blog__tagList">
+            <div class="p-blog__tag">Blog</div>
+            <div class="p-blog__tag">YASHIRO Now</div>
+            <div class="p-blog__tag">陸上競技</div>
+            <div class="p-blog__tag">スポーツ系クラブ</div>
+          </div>
+          <div class="p-blog__title">
+            陸上競技部  やしろテレビ
+          </div>
+          <div class="p-blog__excerpt">
+            11月30日  早いもので、11月も最終日。2学期期末試験1週間前となりました。朝の冷え込みが日ごと増す中、陸上部員は元気に朝練習に励んでいます。一日の練習…
+          </div>
+        </div>
+      </li>
+      <li class="p-blog__contents">
+        <div class="p-blog__thumb"></div>
+        <div class="p-blog__inner">
+          <div class="p-blog__date">2021/11/28</div>
+          <div class="p-blog__tagList">
+            <div class="p-blog__tag">Blog</div>
+            <div class="p-blog__tag">YASHIRO Now</div>
+            <div class="p-blog__tag">文化系クラブ</div>
+          </div>
+          <div class="p-blog__title">
+            吹奏楽部  千葉県音楽祭連合音楽会出演
+          </div>
+          <div class="p-blog__excerpt">
+            私たち八代正院高等学校吹奏楽部は、11月20日に若葉の里公園芸術文化ホールにて行われた第39回千葉県音楽祭と、11月24日に千葉文化ホールにて行われた第46回…
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="p-contents__btn">Blog記事一覧</div>
+  </div>
+
+  <div class="p-contents__curriWrap">
+    <div class="p-contents__title">教育内容</div>
+    <div class="p-curri__heading">YASHIROSHOIN's<br>CURRICULUM</div>
+    <ul class="p-curri__contents">
+      <li class="p-curri__contentsList">
+        <a class="p-curri__box" href="#">
+          <div class="p-curri__thumb">
+            <div class="p-curri__thumbTitle">
+              英数特進コース
+            </div>
+            <div class="p-curri__thumbLink">
+              READ MORE
+            </div>
+          </div>
+          <div class="p-curri__course">
+            <div class="p-curri__courseTitle">
+              英数特進コース
+            </div>
+            <div class="p-curri__intro">
+              英語と数学をキーに、未来を切り拓く。<br>持ち味を最大限に伸ばすカリキュラムに、進学補講（ESTゼミ）を加え、徹底的に学力を伸ばす新たなコースが誕生します！
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="p-curri__contentsList">
+        <a class="p-curri__box" href="#">
+          <div class="p-curri__thumb">
+            <div class="p-curri__thumbTitle">
+              進学コース
+            </div>
+            <div class="p-curri__thumbLink">
+              READ MORE
+            </div>
+          </div>
+          <div class="p-curri__course">
+            <div class="p-curri__courseTitle">
+              進学コース
+            </div>
+            <div class="p-curri__intro">
+              独自の習熟度別クラスや、幅広い選択科目制カリキュラム、大学卒業後まで見据えた進路指導などにより、一人ひとりの学力と個性を伸ばします。
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="p-curri__contentsList">
+        <a class="p-curri__box" href="#">
+          <div class="p-curri__thumb">
+            <div class="p-curri__thumbTitle">
+              国際コース
+            </div>
+            <div class="p-curri__thumbLink">
+              READ MORE
+            </div>
+          </div>
+          <div class="p-curri__course">
+            <div class="p-curri__courseTitle">
+              国際コース
+            </div>
+            <div class="p-curri__intro">
+              国際コースでは、多様化する大学入試への対応はもちろん、さらにその先を見据えて、将来のグローバル社会でも活躍できる国際的な視野や、豊かな知性と人間性を育んでいます。
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="p-contents__movieWrap">
+    <div class="p-contents__title">Movie Gallery</div>
+    <div class="p-movie__slider">
+      <ul class="p-movie__sliderList">
+        <li class="p-movie__sliderContents">
+          <video width="530" height="430" controls poster="./assets/images/lib.jpg" autoplay muted playsinline>
+            <source src="./assets/images/library.mp4">
+            <source src="video.webm">
+            <source src="video.ogg">
+          </video>
+          <div class="p-movie__description">
+            <div class="p-movie__title">英数特進コース紹介</div>
+            <p class="p-movie__text">
+              英語、数学を軸に、基礎から応用、発展まで、徹底した学習サポートを行うことで、最難関の国立大学や医学部、また海外大学への現役進学を目標とする、ハイレベルコースです。
+            </p>
+          </div>
+        </li>
+        <li class="p-movie__sliderContents">
+          <video width="530" height="430" controls poster="./assets/images/lib.jpg" autoplay muted playsinline>
+            <source src="./assets/images/library.mp4">
+            <source src="video.webm">
+            <source src="video.ogg">
+          </video>
+          <div class="p-movie__description">
+            <div class="p-movie__title">英数特進コース紹介</div>
+            <p class="p-movie__text">
+              英語、数学を軸に、基礎から応用、発展まで、徹底した学習サポートを行うことで、最難関の国立大学や医学部、また海外大学への現役進学を目標とする、ハイレベルコースです。
+            </p>
+          </div>
+        </li>
+        <li class="p-movie__sliderContents">
+          <video width="530" height="430" controls poster="./assets/images/lib.jpg" autoplay muted playsinline>
+            <source src="./assets/images/library.mp4">
+            <source src="video.webm">
+            <source src="video.ogg">
+          </video>
+          <div class="p-movie__description">
+            <div class="p-movie__title">英数特進コース紹介</div>
+            <p class="p-movie__text">
+              英語、数学を軸に、基礎から応用、発展まで、徹底した学習サポートを行うことで、最難関の国立大学や医学部、また海外大学への現役進学を目標とする、ハイレベルコースです。
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <ul class="p-movie__dots">
+      <li class="c-btn"></li>
+      <li class="c-btn"></li>
+      <li class="c-btn"></li>
+    </ul>
+  </div>
+
+  <div class="p-contents__movieWrap">
+    <div class="p-contents__title">説明会</div>
+  </div>
+</main>
 <% include src/ejs/template/_footer %>
