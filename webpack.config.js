@@ -38,19 +38,6 @@ module.exports = (env, argv) => {
         filename: 'about/index.html',
         template: 'src/ejs/about/index.ejs',
       }),
-
-      // php
-      new CopyWebpackPlugin(
-        PRODUCTION
-          ? [
-              {
-                from: './src/api/*.php',
-                to: path.resolve(__dirname, 'public/api'),
-                flatten: true,
-              },
-            ]
-          : []
-      ),
     ],
     resolve: {
       extensions: [
