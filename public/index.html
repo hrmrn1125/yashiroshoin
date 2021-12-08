@@ -6,19 +6,18 @@
 <meta name="description" content="トップのdescription" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" href="./assets/images/fav.png" />
 
 <title>TOP</title>
-<link href="assets/stylesheets/bundlebc032a9c685e84589c14.css" rel="stylesheet"></head>
+<link href="assets/stylesheets/bundle82db81c80f472a53b67d.css" rel="stylesheet"></head>
 <body>
 <div class="l-wrap">
 
 
 
 <header class="l-header">
-  <div class="l-header__title">
-    <div class="l-header__logo"><div>
-    <div class="l-header__highSchool">
+  <div class="l-header__inner">
+    <div class="l-header__title">
+      <div class="l-header__logo"><div>
       <h1 class="l-header__schoolName">八代正院高等学校</h1>
       <h2 class="l-header__nameLowercase">Yashirosyoin Gakuen</h2>
     </div>
@@ -41,7 +40,7 @@
             <a class="p-menu__subLink" href="#">卒業生の方へ</a>
           </li>
           <li class="p-menu__subItem">
-            <div class="p-menu__subIcon">
+          <div class="p-menu__subIcon">
             </div>
             <a class="p-menu__subLink" href="#">資料請求・お問い合わせ</a>
           </li>
@@ -101,63 +100,78 @@
 <main class="l-main">
 
   <div class="p-topHero">
-    <div class="p-topHero__background">
-      <img class="p-topHero__picture" src="./assets/images/topHero.jpg" alt="生徒たち">
-      <div class="p-topHero__boarder"></div>
+    <div class="p-topHero__carousel">
+      <ul class="p-topHero__item">
+        <li class="p-topHero__itemInner">
+          <img class="p-topHero__picture" src="./assets/images/topHero.jpg" alt="生徒たち">
+        </li>
+        <li class="p-topHero__itemInner">
+          <img class="p-topHero__picture" src="./assets/images/topHero.jpg" alt="生徒たち">
+        </li>
+        <li class="p-topHero__itemInner">
+          <img class="p-topHero__picture" src="./assets/images/topHero.jpg" alt="生徒たち">
+        </li>
+      </ul>
     </div>
-    <div class="p-slider">
-      <ul class="p-slider__eyecatch">
+    <ul class="p-topHero__dots">
+      <li class="p-topHero__btn" id="b1"></li>
+      <li class="p-topHero__btn" id="b2"></li>
+      <li class="p-topHero__btn" id="b3"></li>
+    </ul>
+    <div class="p-topHero__boarder"></div>
+    <div class="p-carousel">
+      <ul class="p-carousel__eyecatch">
         
-        <li class="p-slider__item">
-          <a class="p-slider__link" href="#">
-            <div class="p-slider__picture">
-              <div class="p-slider__arrow"></div>
+        <li class="p-carousel__item">
+          <a class="p-carousel__link" href="#">
+            <div class="p-carousel__picture">
+              <div class="p-carousel__arrow"></div>
               <img src="./assets/images/bricks.jpg" alt="学校紹介">
             </div>
-            <div class="p-slider__background">
-              <div class="p-slider__text">
+            <div class="p-carousel_background">
+              <div class="p-carousel__text">
                 ぐるりと360°学校紹介
               </div>
             </div>
           </a>
         </li>
         
-        <li class="p-slider__item">
-          <a class="p-slider__link" href="#">
-            <div class="p-slider__picture">
-              <div class="p-slider__arrow"></div>
+        <li class="p-carousel__item">
+          <a class="p-carousel__link" href="#">
+            <div class="p-carousel__picture">
+              <div class="p-carousel__arrow"></div>
               <img src="./assets/images/bricks.jpg" alt="学校紹介">
             </div>
-            <div class="p-slider__background">
-              <div class="p-slider__text">
+            <div class="p-carousel_background">
+              <div class="p-carousel__text">
                 英数特進コース紹介
               </div>
             </div>
           </a>
         </li>
         
-        <li class="p-slider__item">
-          <a class="p-slider__link" href="#">
-            <div class="p-slider__picture">
-              <div class="p-slider__arrow"></div>
+        <li class="p-carousel__item">
+          <a class="p-carousel__link" href="#">
+            <div class="p-carousel__picture">
+              <div class="p-carousel__arrow"></div>
               <img src="./assets/images/bricks.jpg" alt="学校紹介">
             </div>
-            <div class="p-slider__background">
-              <div class="p-slider__text">
+            <div class="p-carousel_background">
+              <div class="p-carousel__text">
                 進学コース紹介
               </div>
             </div>
           </a>
         </li>
         
-        <li class="p-slider__item">
-          <a class="p-slider__link" href="#">
-            <div class="p-slider__picture">
-              <div class="p-slider__arrow"></div>
+        <li class="p-carousel__item">
+          <a class="p-carousel__link" href="#">
+            <div class="p-carousel__picture">
+              <div class="p-carousel__arrow"></div>
               <img src="./assets/images/bricks.jpg" alt="学校紹介">
             </div>
-            <div class="p-slider__background">
-              <div class="p-slider__text">
+            <div class="p-carousel_background">
+              <div class="p-carousel__text">
                 国際コース紹介
               </div>
             </div>
@@ -323,10 +337,10 @@
 
   <div class="p-contents__movieWrap">
     <div class="p-contents__title">Movie Gallery</div>
-    <div class="p-movie__slider">
-      <ul class="p-movie__sliderList">
-        <li class="p-movie__sliderContents">
-          <video width="530" height="430" controls poster="./assets/images/lib.jpg" autoplay muted playsinline>
+    <div class="p-movie__carousel">
+      <ul class="p-movie__carouselItem">
+        <li class="p-movie__contents">
+          <video width="530" height="430" controls poster="./assets/images/library.jpg" autoplay muted playsinline>
             <source src="./assets/images/library.mp4">
             <source src="video.webm">
             <source src="video.ogg">
@@ -338,8 +352,8 @@
             </p>
           </div>
         </li>
-        <li class="p-movie__sliderContents">
-          <video width="530" height="430" controls poster="./assets/images/lib.jpg" autoplay muted playsinline>
+        <li class="p-movie__contents">
+          <video width="530" height="430" controls poster="./assets/images/library.jpg" autoplay muted playsinline>
             <source src="./assets/images/library.mp4">
             <source src="video.webm">
             <source src="video.ogg">
@@ -351,8 +365,8 @@
             </p>
           </div>
         </li>
-        <li class="p-movie__sliderContents">
-          <video width="530" height="430" controls poster="./assets/images/lib.jpg" autoplay muted playsinline>
+        <li class="p-movie__contents">
+          <video width="530" height="430" controls poster="./assets/images/library.jpg" autoplay muted playsinline>
             <source src="./assets/images/library.mp4">
             <source src="video.webm">
             <source src="video.ogg">
@@ -373,11 +387,103 @@
     </ul>
   </div>
 
-  <div class="p-contents__movieWrap">
+  <div class="p-contents__briefingWrap">
     <div class="p-contents__title">説明会</div>
+    <ul class="p-briefing__list">
+      <li class="p-briefing__box">
+        <div class="p-briefing__date">12/4</div>
+        <div class="p-briefing__dow">Sat.</div>
+        <div class="p-briefing__schedule">
+          9:30開始（国際コース）<br>11:00開始（英数特進コース）
+        </div>
+        <div class="p-briefing__title">
+          第10回入試説明会<br>（オンライン）
+        </div>
+      </li>
+      <li class="p-briefing__box">
+        <div class="p-briefing__date">12/11</div>
+        <div class="p-briefing__dow">Sat.</div>
+        <div class="p-briefing__schedule">
+          10:00開始（英数特進コース）<br>11:30開始（国際コース）
+        </div>
+        <div class="p-briefing__title">
+          第11回入試説明会<br>（オンライン）
+        </div>
+      </li>
+    </ul>
+    <div class="p-contents__btn">READ MORE</div>
   </div>
 </main>
+<div class="l-footer">
+  <div class="p-banner">
+    <ul class="p-banner__list">
+      <li class="p-banner__box">
+        <div class="p-banner__inner">
+          <div class="p-banner__text">首都圏学校情報サイト<br>スクスポ</div>
+          <div class="p-banner__icon"></div>
+        </div>
+      </li>
+      <li class="p-banner__box">
+        <div class="p-banner__nc">
+          <div class="p-banner__ncHead">NC版</div>
+          <div class="p-banner__ncLogo"></div>
+          <div class="p-banner__ncText">
+            <div class="p-banner__nclName">八代正院高等学校</div>
+            <div class="p-banner__ncLowercase">Yashirosyoin Gakuen</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="l-footer__main">
+    <div class="p-footer__top">
+      <ul class="p-footer__list">
+        <li class="p-footer__link">
+          <a class="p-footer__linkText" href="#">総合TOP</a>
+        </li>
+        <li class="p-footer__link">
+          <a class="p-footer__linkText" href="#">八代正院中学校</a>
+        </li>
+        <li class="p-footer__link">
+          <a class="p-footer__linkText" href="#">八代正院高等学校</a>
+        </li>
+      </ul>
+    </div>
+    <div class="p-footer__middle">
+      <div class="p-footer__inner">
+        <div class="p-footer__logo"></div>
+        <div class="p-footer__title">
+          <h3 class="p-footer__schoolName">八代正院高等学校</h1>
+          <h4 class="p-footer__nameLowercase">Yashirosyoin Gakuen</h2>
+        </div>
+      </div>
+      <div class="p-footer__schoolInfo">
+        <p class="p-footer__address">
+          〒999-9999  千葉県八代市正院999
+        </p>
+        <p class="p-footer__tel">
+          phone:999-999-9999 / fax:999-999-9999
+        </p>
+      </div>
+      <div class="p-footer__siteInfo">
+        <a class="p-footer__privacy" href="#">プライバシー</a>
+        <a class="p-footer__sitemap" href="#">サイトマップ</a>
+      </div>
+    </div>
+    <div class="p-footer__bottom">
+      <p class="p-footer__copyright">
+        Copyright(c) Yashirosyoin Gakuen All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="l-common">
+  <ul class="">
+    <li class="">
+    </li>
+  </ul>
+</div>
 </div><!-- l-wrap -->
-<script type="text/javascript" src="assets/javascripts/bundlebc032a9c685e84589c14.js"></script></body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascripts/bundle82db81c80f472a53b67d.js"></script></body>
 </html>
-

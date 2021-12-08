@@ -1,0 +1,47 @@
+@media screen and (min-width: 769px) {
+  /* PC style */
+.p-topHero {
+  width: 1347px;
+  height: 644px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  &__carousel {
+    width: 1128px;
+    height: 554px;
+    display: flex;
+  }
+}
+.p-topHero__carousel > ul.p-topHero__item {
+  width: calc(100% * 3);
+  display: flex;
+  margin-left: -100%;
+  transition: .3s;
+}
+.p-topHero__picture {
+  width: 1128px;
+  height: 554px;
+  object-fit: fill;
+}
+.p-topHero {
+  &__dots {
+    width: 90px;
+    height: 24px;
+    position: absolute;
+    right: 60px;
+    top: 90%;
+    bottom: auto;
+  }
+  &__btn {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #1f5ab2;
+  background-color: #fff;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0 5px;
+  }
+}
+}

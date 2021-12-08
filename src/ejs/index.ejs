@@ -12,21 +12,36 @@
 <main class="l-main">
 
   <div class="p-topHero">
-    <div class="p-topHero__background">
-      <img class="p-topHero__picture" src="./assets/images/topHero.jpg" alt="生徒たち">
-      <div class="p-topHero__boarder"></div>
+    <div class="p-topHero__carousel">
+      <ul class="p-topHero__item">
+        <li class="p-topHero__itemInner">
+          <img class="p-topHero__picture" src="./assets/images/topHero.jpg" alt="生徒たち">
+        </li>
+        <li class="p-topHero__itemInner">
+          <img class="p-topHero__picture" src="./assets/images/topHero.jpg" alt="生徒たち">
+        </li>
+        <li class="p-topHero__itemInner">
+          <img class="p-topHero__picture" src="./assets/images/topHero.jpg" alt="生徒たち">
+        </li>
+      </ul>
     </div>
-    <div class="p-slider">
-      <ul class="p-slider__eyecatch">
+    <ul class="p-topHero__dots">
+      <li class="p-topHero__btn" id="b1"></li>
+      <li class="p-topHero__btn" id="b2"></li>
+      <li class="p-topHero__btn" id="b3"></li>
+    </ul>
+    <div class="p-topHero__boarder"></div>
+    <div class="p-carousel">
+      <ul class="p-carousel__eyecatch">
         <% intro.forEach(function(introduce) { %>
-        <li class="p-slider__item">
-          <a class="p-slider__link" href="#">
-            <div class="p-slider__picture">
-              <div class="p-slider__arrow"></div>
+        <li class="p-carousel__item">
+          <a class="p-carousel__link" href="#">
+            <div class="p-carousel__picture">
+              <div class="p-carousel__arrow"></div>
               <img src="./assets/images/<%= introduce.image %>" alt="学校紹介">
             </div>
-            <div class="p-slider__background">
-              <div class="p-slider__text">
+            <div class="p-carousel_background">
+              <div class="p-carousel__text">
                 <%= introduce.text %>
               </div>
             </div>
@@ -192,10 +207,10 @@
 
   <div class="p-contents__movieWrap">
     <div class="p-contents__title">Movie Gallery</div>
-    <div class="p-movie__slider">
-      <ul class="p-movie__sliderList">
-        <li class="p-movie__sliderContents">
-          <video width="530" height="430" controls poster="./assets/images/lib.jpg" autoplay muted playsinline>
+    <div class="p-movie__carousel">
+      <ul class="p-movie__carouselItem">
+        <li class="p-movie__contents">
+          <video width="530" height="430" controls poster="./assets/images/library.jpg" autoplay muted playsinline>
             <source src="./assets/images/library.mp4">
             <source src="video.webm">
             <source src="video.ogg">
@@ -207,8 +222,8 @@
             </p>
           </div>
         </li>
-        <li class="p-movie__sliderContents">
-          <video width="530" height="430" controls poster="./assets/images/lib.jpg" autoplay muted playsinline>
+        <li class="p-movie__contents">
+          <video width="530" height="430" controls poster="./assets/images/library.jpg" autoplay muted playsinline>
             <source src="./assets/images/library.mp4">
             <source src="video.webm">
             <source src="video.ogg">
@@ -220,8 +235,8 @@
             </p>
           </div>
         </li>
-        <li class="p-movie__sliderContents">
-          <video width="530" height="430" controls poster="./assets/images/lib.jpg" autoplay muted playsinline>
+        <li class="p-movie__contents">
+          <video width="530" height="430" controls poster="./assets/images/library.jpg" autoplay muted playsinline>
             <source src="./assets/images/library.mp4">
             <source src="video.webm">
             <source src="video.ogg">

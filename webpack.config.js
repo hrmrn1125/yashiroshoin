@@ -71,7 +71,7 @@ module.exports = (env, argv) => {
             {
               loader: 'css-loader',
               options: {
-                url: false,// sassで相対パスを書けるようにする
+                url: true,
                 sourceMap: true,
               },
             },
@@ -109,13 +109,7 @@ module.exports = (env, argv) => {
               },
             },
           ],
-        },
-        {
-          enforce: 'pre',
-          test: /\.js$/,
-          exclude: /node_modules/,
-          loader: 'eslint-loader',
-        },
+        }
       ],
     },
     devServer: {
