@@ -38,6 +38,10 @@ module.exports = (env, argv) => {
         filename: 'about/index.html',
         template: 'src/ejs/about/index.ejs',
       }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery'
+      })
     ],
     resolve: {
       extensions: [
