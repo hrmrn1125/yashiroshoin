@@ -1,0 +1,13 @@
+.p-briefing {
+  &__wrap {
+    width: 98.6vw;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  &__box {
+    padding: 60px 15px;
+    background-color: #eee;
+    text-align: center;
+    font-size: 2rem;
+  }
+}

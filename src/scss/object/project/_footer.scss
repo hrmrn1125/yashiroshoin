@@ -1,0 +1,162 @@
+.p-footer {
+  &__banner {
+    position: relative;
+    display: block;
+    padding: 75px 35px;
+    width: 98.6vw;
+    overflow: visible;
+  }
+  &__bannerList {
+    height: 102px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+    &:before {
+      content: "";
+      display: table;
+    }
+  }
+  &__bannerBox {
+    display: table;
+    width: 295px;
+    height: 102px;
+    min-height: 1px;
+    padding: 15px;
+    float: left;
+    margin-left: 30px;
+    background-color: #fff;
+  }
+  &__bannerInner {
+    width: 100%;
+    height: 100%;
+    border: solid;
+    border-color: rgb(209, 209, 209);
+  }
+  &__bannerNc {
+    background-color: #0CCAA0;
+  }
+  &__bannerNcText {
+    font: #fff;
+  }
+  &__bannerNclName {
+    font: #fff;
+  }
+  &__bannerNcLowercase {
+    font: #fff;
+  }
+  &__topList {
+    text-align: center;
+    font-size: 0;
+    border-bottom: 1px solid #aaa;
+    padding: 0 15px;
+  }
+  &__topList li:not(:last-child):after {
+    content: "";
+    width: 1px;
+    height: 50%;
+    background-color: #4d4d4d;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform-origin: center center;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  &__topLink {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+  &__topLinkText {
+    display: block;
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+  &__middle {
+    padding: 30px 15px 15px;
+    text-align: center;
+  }
+  &__inner {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+  }
+  &__logo {
+    display: inline-block;
+    width: 70px;
+    height: 5vh;
+    top: 35%;
+    margin-top: 6px;
+    background-image: url('#{$bgPath}/header/emblem.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &__title {
+    height: 100%;
+    width: 30vw;
+    margin-left: 11px;
+  }
+  &__schoolName {
+    white-space: nowrap;
+    color: $colorBlack;
+    font-size: 4rem;
+    float: left;
+  }
+  &__nameLowercase {
+    white-space: nowrap;
+    color: gray;
+    font-size: 2rem;
+    float: left;
+  }
+  &__address {
+    margin-top: 15px;
+  }
+  &__siteInfo {
+    text-align: center;
+  }
+  &__siteInfo a {
+    display: inline-block;
+    font-size: 1.2rem;
+    color: inherit;
+    position: relative;
+    padding: 0 10px;
+  }
+  &__siteInfo a:nth-of-type(n+2) {
+    border-left: 1px solid #aaa;
+  }
+  &__copyright {
+    text-align: center;
+    font-size: 1rem;
+    background-color: #1f5ab2;
+    color: #fff;
+    padding: 5px 0;
+    width: 98.6vw;
+  }
+  &__goToTop {
+    opacity: 0.65;
+    position: fixed;
+    bottom: 100px;
+    right: 5px;
+    z-index: 100;
+    cursor: pointer;
+    width: 85px;
+    height: 85px;
+    transition: all .5s;
+    border-radius: 5px;
+    background-color: rgba(77,77,77,1);
+    &:after {
+      content: "";
+      position: absolute;
+      left: 29.8%;
+      top: 39.8%;
+      border-left: 17px solid transparent;
+      border-right: 17px solid transparent;
+      border-bottom: 18.5px solid $colorWhite;
+    }
+  }
+}

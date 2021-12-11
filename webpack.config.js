@@ -38,10 +38,19 @@ module.exports = (env, argv) => {
         filename: 'about/index.html',
         template: 'src/ejs/about/index.ejs',
       }),
-      new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery'
-      })
+
+      // php
+      new CopyWebpackPlugin(
+        PRODUCTION
+          ? [
+              {
+                from: './src/api/*.php',
+                to: path.resolve(__dirname, 'public/api'),
+                flatten: true,
+              },
+            ]
+          : []
+      ),
     ],
     resolve: {
       extensions: [
@@ -75,7 +84,7 @@ module.exports = (env, argv) => {
             {
               loader: 'css-loader',
               options: {
-                url: true,
+                url: false,// sassで相対パスを書けるようにする
                 sourceMap: true,
               },
             },
@@ -113,7 +122,13 @@ module.exports = (env, argv) => {
               },
             },
           ],
-        }
+        },
+        {
+          enforce: 'pre',
+          test: /\.js$/,
+          exclude: /node_modules/,
+          loader: 'eslint-loader',
+        },
       ],
     },
     devServer: {

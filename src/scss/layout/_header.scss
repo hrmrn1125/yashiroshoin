@@ -1,36 +1,56 @@
 .l-header {
+  display: flex;
   padding: 30px 15px;
   position: absolute;
   z-index: 2;
   top: 0;
   left: 0;
   right: 0;
+  width: 98.6vw;
 
-  &__title {
-    display: flex;
-    flex-flow: column;
-    padding-left: 8px;
-    height: 60px;
-    width: 390px;
-  }
   &__inner {
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 5px 10px rgba(0,0,0,0 / 30%);
-    height: 102px;
-    width: 1287px;
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.3);
+    height: 132px;
+    max-height: 150px;
+    width: 98.6vw;
     padding: 15px;
     position: relative;
   }
+  &__titleWrap {
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    margin-top: 6px;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    display: flex;
+  }
   &__logo {
-    width: 66px;
-    height: 66px;
+    display: inline-block;
+    width: 70px;
+    height: 7vh;
+    top: 30%;
+    margin-top: 6px;
+    left: 15px;
+    background-image: url('#{$bgPath}/header/emblem.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &__title {
+    height: 100%;
+    width: 30vw;
+    margin-left: 11px;
   }
   &__schoolName {
-    color: black;
-    line-height: 40px;
+    white-space: nowrap;
+    color: $colorBlack;
+    font-size: 4rem;
   }
   &__nameLowercase {
+    white-space: nowrap;
     color: gray;
-    line-height: 14px;
+    font-size: 2rem;
   }
 }

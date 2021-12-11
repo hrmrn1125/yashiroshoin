@@ -1,0 +1,95 @@
+.p-carousel {
+  position: absolute;
+  padding: 250px 0 0;
+  min-height: 640px;
+  width: 100%;
+  top: 0;
+
+  &__box {
+    width: 480px;
+    height: 384px;
+    margin-left: 50px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: #0097e0;
+      width: 400px;
+      height: 225px;
+      margin-left: 80px;
+      top: 27%;
+      z-index: 1;
+      box-shadow: 0 10px 10px -5px rgba(0,0,0, 0.3);
+    }
+  }
+  &__item {
+    width: 480px;
+    height: 384px;
+    display: flex;
+  }
+  &__link {
+    width: 480px;
+    height: 384px;
+    display: flex;
+  }
+  &__eyeCatch {
+    width: 480px;
+    height: 384px;
+    display: flex;
+  }
+  &__picture {
+    position: absolute;
+    padding-top: 35px;
+    margin-right: 80px;
+    width: 400px;
+    height: 225px;
+    z-index: 4;
+  }
+  &__text {
+    position: absolute;
+    padding-left: 25%;
+    top: 70%;
+    height: 40px;
+    width: 480px;
+    color: #fff;
+    line-height: 1.8;
+    z-index: 6;
+  }
+  &__text > :first-child {
+    margin-top: 0
+  }
+  &__text > :last-child {
+    margin-bottom: 0
+  }
+}
+
+.p-carousel__box > ul.p-carousel__eyecatch {
+  width: calc(100% * 3);
+  display: flex;
+}
+
+.p-carousel__picture img {
+  width: 400px;
+  height: 225px;
+  object-fit: fill;
+  z-index: 3;
+}
+
+.p-carousel__picture > span {
+  position: absolute;
+  top: 50%;
+  background-color: #444444;
+  color: #fff;
+  height: 60px;
+  width: 40px;
+  font-size: 40px;
+}
+.p-carousel__picture > span.p-carousel__prev{
+  left: 0;
+}
+.p-carousel__picture > span.p-carousel__next{
+  right: 0;
+}
