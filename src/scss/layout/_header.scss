@@ -8,6 +8,29 @@
   right: 0;
   width: 98.6vw;
 
+  &__change {
+    position: fixed;
+    display: flex;
+    padding: 0;
+    top: -162px;
+    left: 20px;
+    right: 0;
+    width: 98.6vw;
+    transition: 0.3s ease-in-out;
+    z-index: 3;
+  }
+  &__change.show {
+    top: 0;
+  }
+  &__changeInner {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.3);
+    height: 132px;
+    max-height: 150px;
+    width: 98.6vw;
+    padding: 15px;
+    position: absolute;
+  }
   &__inner {
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 5px 10px rgba(0,0,0, 0.3);
@@ -21,7 +44,6 @@
     max-width: 400px;
     width: 100%;
     position: absolute;
-    margin-top: 6px;
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
@@ -29,9 +51,9 @@
   }
   &__logo {
     display: inline-block;
-    width: 70px;
+    width: 75px;
     height: 7vh;
-    top: 30%;
+    top: 32%;
     margin-top: 6px;
     left: 15px;
     background-image: url('#{$bgPath}/header/emblem.png');

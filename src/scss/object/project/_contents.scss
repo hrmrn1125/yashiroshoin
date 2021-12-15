@@ -29,13 +29,25 @@
     margin-top: 0;
     padding: 90px 0;
     position: relative;
-    &::before {
+    &:before {
       content: "";
-      position: absolute;
-      top: 0;
+      width: 68%;
+      height: 57%;
+      bottom: 60px;
       left: 0;
-      width: 98.6vw;
-      height: 100%;
+      position: absolute;
+      z-index: -1;
+      background: linear-gradient(to right, rgba(200,220,240,1) 0%,rgba(30,152,211,1) 50%,rgba(0,117,186,1) 80%,rgba(0,91,147,1) 100%);
+    }
+    &:after {
+      content: "";
+      width: 24%;
+      height: 79%;
+      bottom: 0;
+      right: -18px;
+      position: absolute;
+      z-index: -2;
+      background: repeating-linear-gradient(-45deg, #bafa9c, #bafa9c 3px, transparent 3px, transparent 6px);
     }
   }
   &__briefingWrap {
@@ -62,6 +74,18 @@
     z-index: -2;
   }
   &__titleWrap {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  &__blogTitle {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  &__curriTitle {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  &__briefingTitle {
     margin-bottom: 60px;
     text-align: center;
   }
@@ -114,14 +138,15 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
     & > :first-child {
       margin-top: 0;
     }
   }
   &__headline {
     display: block;
+    text-decoration: none;
     position: relative;
     width: fit-content;
     margin-bottom: 18px;
@@ -135,8 +160,11 @@
       height: 2px;
       background: #0097e0;
       transform: scale(0,1);
-      transform-origin: right top;
+      transform-origin: left top;
       transition: transform .5s;
+    }
+    &:hover::after {
+      transform: scale(1, 1);
     }
   }
   &__headline span:nth-of-type(1) {

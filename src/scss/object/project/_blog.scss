@@ -21,10 +21,6 @@
     position: relative;
     padding: 0 0 2px 5px;
     cursor: pointer;
-    &.active:before {
-      border-color: #0097e0;
-      background-color: #0097e0;
-    }
     &:before {
       content: "";
       width: 180px;
@@ -42,13 +38,6 @@
       display: block;
     }
   }
-  &__list {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
   &__contentsCover {
     display: block;
     width: 40vw;
@@ -64,6 +53,23 @@
   &__thumb {
     padding-bottom: 66.6666666666666%;
     background-image: url(../../assets/images/whiteboard.jpg);
+    background-position: center;
+    position: relative;
+    &:before {
+      content: "";
+      width: 2px;
+      height: 60px;
+      background-color: #0097e0;
+      position: absolute;
+      left: 50%;
+      bottom: -30px;
+      margin-left: -1px;
+      transition: all .5s;
+    }
+  }
+  &__thumbChange {
+    padding-bottom: 66.6666666666666%;
+    background-image: url(../../assets/images/bricks.jpg);
     background-position: center;
     position: relative;
     &:before {
@@ -129,5 +135,49 @@
     margin-top: 10px;
     font-size: 1.2rem;
     color: #888;
+  }
+}
+
+.p-blog__contentsWrap ul {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.p-blog__hidden {
+  display: none;
+}
+.p-blog__hidden > li {
+  display: none;
+}
+
+.change {
+  display: inline-block;
+  margin-right: 30px;
+  min-width: 180px;
+  position: relative;
+  padding: 0 0 2px 5px;
+  cursor: pointer;
+  &:before {
+    content: "";
+    width: 180px;
+    height: 10px;
+    border: 1px  solid #ddd;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-color: #0097e0;
+    background-color: #0097e0;
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    width: 2px;
+    height: 40px;
+    background-color: #0097e0;
+    position: absolute;
+    bottom: -50px;
+    left: 15px;
   }
 }

@@ -75,6 +75,11 @@
     padding: 0 20px;
     font-size: 17px;
   }
+  &__changeTopLink {
+    color: #0097e0;
+    padding: 0 8px;
+    font-size: 20px;
+  }
   &__link {
     display: block;
     white-space: nowrap;
@@ -95,6 +100,13 @@
     &:last-child {
       border-bottom: none;
     }
+  }
+  &__changeHeader {
+    height: 102px;
+    top: 24%;
+    margin-left: auto;
+    position: relative;
+    float: right;
   }
 }
 

@@ -13,7 +13,6 @@
     display: flex;
     position: relative;
     overflow: hidden;
-    z-index: 1;
   }
   &__boarder {
     width: 98.6vw;
@@ -26,15 +25,23 @@
     z-index: -1;
   }
 }
+
 .p-topHero__carousel > ul.p-topHero__item {
   width: calc(100% * 4);
   display: flex;
   position: absolute;
 }
+.p-topHero__item li.active {
+  width: 73vw;
+  height: 554px;
+  position: absolute;
+  margin: 0;
+}
 .p-topHero__item {
   width: 73vw;
   height: 554px;
   position: absolute;
+  margin: 0;
 }
 .p-topHero__item img {
   position: absolute;
