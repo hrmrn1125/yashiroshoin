@@ -5,7 +5,7 @@
     bottom: 0;
     left: 20px;
     right: 0;
-    width: auto;
+    width: 98.6vw;
     background-color: rgba(230, 230, 230, 0.9);
     border-top: solid 5px #0097e0;
     padding: 10px;
@@ -38,6 +38,7 @@
   .p-common {
     &__fixedLink {
       left: 0;
+      width: 98.6vw;
     }
     &__linkItem a {
       font-size: 1.2rem;

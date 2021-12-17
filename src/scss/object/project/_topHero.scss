@@ -48,3 +48,27 @@
   object-fit: fill;
 }
 
+@media only screen and (max-width: 1023px) {
+  .p-topHero {
+    padding: 150px 0 0;
+    min-height: 550px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .p-topHero {
+    padding: 0;
+    min-height: 400px;
+
+    &__boarder {
+      display: none;
+    }
+    &__carousel {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+    }
+  }
+}

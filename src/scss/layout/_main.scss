@@ -1,88 +1,14 @@
-.clip-image-wrapper {
-	position: relative;
-	overflow: hidden;
-}
-.clip-image-wrapper img {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
-	width: 100%;
-	transition: all .5s;
-}
-
-.bg-cover {
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-.display-table {
-	display: table;
-	border-collapse: collapse;
-}
-.display-table-cell {
-	display: table-cell;
-}
-.table-layout-fixed {
-	width: 100%;
-	table-layout: fixed;
-}
-
-.img-caption {
-    display: block;
-    margin: 15px 0 0;
-    font-size: 1.4rem;
-    color: #888;
-}
-
-.display-flex {
-	-js-display: flex;
-	display: flex;
-}
-.flex-wrap {
-	flex-wrap: wrap;
-}
-.flex-inner {
-	display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-}
-.flex-inner > :first-child {
-	margin-top: 0 !important;
-}
-.flex-inner > :last-child {
-	margin-bottom: 0 !important;
-}
-
-.alignleft {
-  float: none;
-  margin: 0 0 15px;
-  max-width: 100%;
-}
-.alignright {
-  float: none;
-  margin: 0 0 15px;
-  max-width: 100%;
-}
-.aligncenter {
-  clear: both;
-  display: block;
-  margin: 20px auto 0;
-}
-
-.alignleft.floatingImg {
-  float: left;
-  margin: 0 15px 0 0;
-  display: block;
-  max-width: 40%;
-}
-.alignright.floatingImg {
-  float: right;
-  margin: 0 0 0 15px;
-  display: block;
-  max-width: 40%;
+.l-main {
+  width: 98.6vw;
+  overflow: hidden;
+  min-height: 150px;
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
 }

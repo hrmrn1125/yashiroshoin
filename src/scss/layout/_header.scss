@@ -231,12 +231,17 @@
 
 @media only screen and (max-width: 1023px) {
 .l-header {
+  padding: 0;
   &__change {
     display: none;
   }
   &__inner {
     padding-right: 70px;
     background-color: #fff;
+  }
+  &__titleWrap {
+    position: static;
+    transform: none;
   }
   &__spbtn {
     display: block;
@@ -301,7 +306,7 @@
     position: fixed;
     padding: 0;
     &__inner {
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 1);
     }
   }
 }

@@ -4,11 +4,38 @@
   box-sizing: border-box;
 }
 html {
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "游ゴシック", YuGothic, sans-serif;
+  -webkit-text-size-adjust: 100%;
   font-size: 62.5%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border: 0;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  -webkit-locale: "ja";
+  display: block;
 }
+
 body {
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "游ゴシック", YuGothic, sans-serif;
+  -webkit-text-size-adjust: 100%;
   font-size: 1.6rem;
   overflow-x: hidden;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border: 0;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  -webkit-locale: "ja";
+  display: block;
 }
 img {
   vertical-align: middle;
