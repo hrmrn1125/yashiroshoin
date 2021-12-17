@@ -21,6 +21,16 @@ $(() => {
   });
 });
 
+// サイドメニュー
+$(".l-header__spmenu-trigger, .l-sidemenu__closebtn, .l-sidemenu__closeBottom").on('click',() => {
+  let trg = $(".l-header__spmenu-trigger");
+  if(!$(".l-sidemenu").is(':animated')){
+      trg.toggleClass('active');
+      $('html').toggleClass('open');
+  }
+  return false;
+});
+
 // topHero
 $(() => {
   let $width = "73vw",
@@ -39,6 +49,32 @@ $(() => {
 });
 
 // カルーセル
+let slickOption = {
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows : true,
+  dots : false,
+  autoplay:true,
+  autoplaySpeed:8000,
+  infinite : true,
+  prevArrow : '<div class="slick-prev"></div>',
+  nextArrow : '<div class="slick-next"></div>',
+  adaptiveHeight : false,
+  responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+  ]
+};
 
 // go to top
 $(() => {
@@ -180,31 +216,3 @@ $window.scroll(() => {
     }
   });
 });
-
-
-let slickOption = {
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  arrows : true,
-  dots : false,
-  autoplay:true,
-  autoplaySpeed:8000,
-  infinite : true,
-  prevArrow : '<div class="slick-prev"></div>',
-  nextArrow : '<div class="slick-next"></div>',
-  adaptiveHeight : false,
-  responsive: [
-    {
-      breakpoint: 1023,
-      settings: {
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-  ]
-};

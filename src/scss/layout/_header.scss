@@ -75,4 +75,233 @@
     color: gray;
     font-size: 2rem;
   }
+  &__spmenu {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .l-sidemenu {
+		margin-right: 0;
+	}
+	.filter {
+		display: none;
+	}
+  html .filter, .l-sidemenu {
+  display: none;
+  }
+  html.open .filter {
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 300;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+  backface-visibility: hidden;
+  transition: all .3s;
+  }
+  .l-header__spmenu {
+  padding: 0;
+  background-color: #000;
+  width: 300px;
+  position: fixed;
+  box-sizing: border-box;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  backface-visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+  margin-right: -300px;
+  transition: all .5s;
+  }
+  html.open .l-sidemenu {
+  margin-right: 0;
+  }
+  .l-header__spbtn-li {
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0);
+  }
+  .l-header__spmenu-trigger,
+  .l-header__spmenu-trigger span {
+  transition: all .4s;
+  box-sizing: border-box;
+  }
+  .l-header__spmenu-trigger {
+  position: relative;
+  padding-bottom: 100%;
+  display: block;
+  color: inherit;
+  }
+  html.open .l-header__spmenu-trigger {
+  background-color: rgba(255, 255, 255, 0);
+  }
+
+  .l-header__spmenu-trigger span {
+  position: absolute;
+  left: 3px;
+  width: 34px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 1.5px;
+  display: none;
+  }
+  html.open .l-header__spmenu-trigger span {
+  background-color: #fff;
+  }
+  .l-header__spmenu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+  .l-header__spmenu-trigger span:nth-of-type(2) {
+    top: 9px;
+  }
+  .l-header__spmenu-trigger span:nth-of-type(3) {
+    top: 18px;
+  }
+  .l-header__spmenu-trigger span:nth-of-type(4) {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  height: auto;
+  background-color: transparent;
+  font-size: 1.2rem;
+  line-height: 1;
+  }
+  .l-header__spmenu-trigger.active span:nth-of-type(1) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 50%;
+  margin-top: -1px;
+  }
+  .l-header__spmenu-trigger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  .l-header__spmenu-trigger.active span:nth-of-type(3) {
+  transform: rotate(45deg);
+  top: 50%;
+  margin-top: -1px;
+  }
+  .l-header__spmenu-trigger.active span:nth-of-type(4){
+    opacity: 0;
+  }
+  .l-sidemenu__closeBottom {
+    cursor: pointer;
+  }
+  .l-sidemenu__closebtn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  }
+  .l-sidemenu__closebtn:before,
+  .l-sidemenu__closebtn:after{
+  content: "";
+  position: absolute;
+  left: 3px;
+  width: 34px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 1px;
+  }
+  .l-sidemenu__closebtn:before {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 50%;
+  margin-top: -1px;
+  }
+  .l-sidemenu__closebtn:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 50%;
+  margin-top: -1px;
+  }
+  .l-sidemenu__closeBottom {
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+.l-header {
+  &__change {
+    display: none;
+  }
+  &__inner {
+    padding-right: 70px;
+    background-color: #fff;
+  }
+  &__spbtn {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__spbtn-li {
+    background-color: transparent;
+    width: 40px;
+  }
+  &__spmenu-trigger {
+    position: relative;
+    padding-bottom: 100%;
+    display: block;
+    color: inherit;
+    transition: all .4s;
+    box-sizing: border-box;
+  }
+  &__spmenu-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+  &__spmenu-trigger span:nth-of-type(2) {
+    top: 8px;
+    margin-top: 0;
+  }
+  &__spmenu-trigger span:nth-of-type(3) {
+    top: 16px;
+    bottom: 10px;
+  }
+  &__spmenu-trigger span:nth-of-type(4) {
+    display: block;
+    font-size: 1rem;
+    white-space: nowrap;
+    letter-spacing: -0.5px;
+    font-weight: bold;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    height: auto;
+    background-color: transparent;
+    line-height: 1;
+  }
+  &__spmenu-trigger span {
+    position: absolute;
+    height: 2px;
+    background-color: #0097e0;
+    width: 28px;
+    left: 6px;
+    border-radius: 1.5px;
+    transition: all .4s;
+    box-sizing: border-box;
+  }
+}
+}
+
+@media only screen and (max-width: 767px) {
+  .l-header {
+    position: fixed;
+    padding: 0;
+    &__inner {
+      background-color: #fff;
+    }
+  }
 }

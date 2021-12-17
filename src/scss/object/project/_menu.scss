@@ -151,3 +151,11 @@
     background-color: rgba(25, 200, 235, 0.8);
   }
 }
+
+@media only screen and (max-width: 1023px) {
+.p-menu {
+  &__header {
+    display: none;
+  }
+}
+}
