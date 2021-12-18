@@ -8,6 +8,9 @@
   right: 0;
   width: 98.6vw;
 
+  &__changeSpbtn {
+    display: none;
+  }
   &__change {
     position: fixed;
     display: flex;
@@ -41,10 +44,10 @@
     position: relative;
   }
   &__titleWrap {
-    max-width: 400px;
     width: 100%;
+    height: 132px;
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 15px;
     transform: translateY(-50%);
     display: flex;
@@ -52,7 +55,7 @@
   &__logo {
     display: inline-block;
     width: 75px;
-    height: 7vh;
+    height: 100%;
     top: 32%;
     margin-top: 6px;
     left: 15px;
@@ -62,7 +65,6 @@
   }
   &__title {
     height: 100%;
-    width: 30vw;
     margin-left: 11px;
   }
   &__schoolName {
@@ -76,6 +78,9 @@
     font-size: 2rem;
   }
   &__spmenu {
+    display: none;
+  }
+  &__spmenu-trigger {
     display: none;
   }
 }
@@ -231,17 +236,25 @@
 
 @media only screen and (max-width: 1023px) {
 .l-header {
-  padding: 0;
-  &__change {
-    display: none;
-  }
-  &__inner {
-    padding-right: 70px;
-    background-color: #fff;
+  &inner {
+    position: relative;
   }
   &__titleWrap {
-    position: static;
-    transform: none;
+    margin-top: 10px;
+    position: absolute;
+    height: 132px;
+    width: 100%;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    display: flex;
+  }
+  &__changeSpbtn {
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   &__spbtn {
     display: block;
@@ -261,6 +274,7 @@
     color: inherit;
     transition: all .4s;
     box-sizing: border-box;
+    right: 5px;
   }
   &__spmenu-trigger span:nth-of-type(1) {
     top: 0;
@@ -305,8 +319,73 @@
   .l-header {
     position: fixed;
     padding: 0;
+    box-shadow: 0 5px 10px -10px rgba(0,0,0, 0.3);
+    &__change {
+      display: none;
+    }
     &__inner {
-      background-color: rgba(255, 255, 255, 1);
+      background-color: #fff;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .l-header {
+    &__logo {
+      height: 3.5vh;
+      width: 8vw;
+      margin-top: 4px;
+    }
+    &__schoolName {
+      font-size: 2rem;
+    }
+    &__nameLowercase {
+      font-size: 1rem;
+    }
+    &__inner {
+      position: relative;
+      height: 70px;
+      padding: 10px;
+    }
+    &__titleWrap {
+      position: absolute;
+      height: 50px;
+      width: 100%;
+      display: flex;
+      margin-top: 0;
+    }
+    &__title {
+      margin-left: 7px;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .l-header {
+    &__logo {
+      height: 4vh;
+      width: 10vw;
+    }
+    &__schoolName {
+      font-size: 2rem;
+    }
+    &__nameLowercase {
+      font-size: 1rem;
+    }
+    &__inner {
+      position: relative;
+      height: 70px;
+      padding: 10px;
+    }
+    &__titleWrap {
+      position: absolute;
+      height: 50px;
+      width: 100%;
+      display: flex;
+      margin-top: 0;
+    }
+    &__title {
+      margin-left: 5px;
     }
   }
 }

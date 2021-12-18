@@ -159,20 +159,20 @@
     text-align: center;
   }
   &__inner {
-    max-width: 450px;
     margin: 0 auto;
     position: relative;
     display: flex;
+    height: 132px;
   }
   &__logo {
     display: inline-block;
-    width: 85px;
-    height: 7vh;
+    width: 75px;
+    height: 100%;
     top: 50%;
     margin-top: 6px;
     margin-right: 8.5px;
     background-image: url('#{$bgPath}/header/emblem.png');
-    background-size: contain;
+    background-size: fill;
     background-repeat: no-repeat;
   }
   &__title {
@@ -228,6 +228,7 @@
     transition: all .5s;
     border-radius: 5px;
     background-color: rgba(77,77,77,1);
+    z-index: 10;
     &:after {
       content: "";
       position: absolute;
@@ -236,6 +237,92 @@
       border-left: 17px solid transparent;
       border-right: 17px solid transparent;
       border-bottom: 18.5px solid $colorWhite;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .p-footer {
+    &__goToTop {
+      width: 50px;
+      height: 50px;
+      &:after {
+        left: 10px;
+        top: 29%;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 16px solid $colorWhite;
+      }
+    }
+    &__banner {
+      padding: 45px 35px;
+    }
+    &__bannerBox {
+      padding: 0;
+    }
+    &__inner {
+      padding: 0 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .p-footer {
+    &__logo {
+      height: 3.5vh;
+      width: 8vw;
+      margin-top: 4px;
+    }
+    &__schoolName {
+      font-size: 2rem;
+    }
+    &__nameLowercase {
+      font-size: 1rem;
+    }
+    &__inner {
+      position: relative;
+      height: 70px;
+      padding: 10px;
+    }
+    &__titleWrap {
+      position: absolute;
+      height: 50px;
+      width: 100%;
+      display: flex;
+      margin-top: 0;
+    }
+    &__title {
+      margin-left: 7px;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .p-footer {
+    &__logo {
+      height: 4vh;
+      width: 10vw;
+    }
+    &__schoolName {
+      font-size: 2rem;
+    }
+    &__nameLowercase {
+      font-size: 1rem;
+    }
+    &__inner {
+      position: relative;
+      height: 70px;
+      padding: 10px;
+    }
+    &__titleWrap {
+      position: absolute;
+      height: 50px;
+      width: 100%;
+      display: flex;
+      margin-top: 0;
+    }
+    &__title {
+      margin-left: 5px;
     }
   }
 }
