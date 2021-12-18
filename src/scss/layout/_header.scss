@@ -6,7 +6,7 @@
   top: 0;
   left: 0;
   right: 0;
-  width: 98.6vw;
+  width: 99vw;
 
   &__changeSpbtn {
     display: none;
@@ -18,7 +18,7 @@
     top: -162px;
     left: 20px;
     right: 0;
-    width: 98.6vw;
+    width: 100%;
     transition: 0.3s ease-in-out;
     z-index: 3;
   }
@@ -30,7 +30,7 @@
     box-shadow: 0 5px 10px rgba(0,0,0, 0.3);
     height: 132px;
     max-height: 150px;
-    width: 98.6vw;
+    width: 100%;
     padding: 15px;
     position: absolute;
   }
@@ -39,7 +39,8 @@
     box-shadow: 0 5px 10px rgba(0,0,0, 0.3);
     height: 132px;
     max-height: 150px;
-    width: 98.6vw;
+    width: 100%;
+    margin-right: 10px;
     padding: 15px;
     position: relative;
   }
@@ -317,6 +318,7 @@
 
 @media only screen and (max-width: 767px) {
   .l-header {
+    width: 100%;
     position: fixed;
     padding: 0;
     box-shadow: 0 5px 10px -10px rgba(0,0,0, 0.3);
@@ -325,6 +327,7 @@
     }
     &__inner {
       background-color: #fff;
+      margin: 0;
     }
   }
 }

@@ -1,8 +1,9 @@
 .l-wrap {
-  width: 98.6vw;
+  width: 100%;
   padding-bottom: 75px;
   position: relative;
   border-left: 20px solid transparent;
+  right: 0;
   color: #4d4d4d;
   &::before {
     content: '';

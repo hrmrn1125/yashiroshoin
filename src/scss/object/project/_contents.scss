@@ -8,12 +8,14 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 98.6vw;
+      width: 99vw;
       height: 100%;
     }
   }
   &__blogWrap {
     margin-top: 0;
+    right: 0;
+    width: 100%;
     padding: 90px 0;
     position: relative;
     &:before {
@@ -21,7 +23,8 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 98.6vw;
+      right: 0;
+      width: 100%;
       height: 100%;
     }
   }
@@ -59,12 +62,12 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 98.6vw;
+      width: 99vw;
       height: 100%;
     }
   }
   &__blogBoarder {
-    width: 98.6vw;
+    width: 100%;
     height: 28vh;
     position: absolute;
     background: repeating-linear-gradient( #46ade0, #46ade0 5px, #abd0e2 5px, #abd0e2 10px);
@@ -160,7 +163,7 @@
       height: 2px;
       background: #0097e0;
       transform: scale(0,1);
-      transform-origin: left top;
+      transform-origin: right top;
       transition: transform .5s;
     }
     &:hover::after {
@@ -179,7 +182,7 @@
     overflow: hidden;
   }
   &__btnWrap {
-    margin-top: 30px;
+    margin-top: 50px;
   }
   &__btn {
     display: block;
