@@ -51,6 +51,14 @@
     background-color: #fff;
     height: 100%;
   }
+  &__contents:hover .p-blog__hover {
+    opacity: 1;
+  }
+  &__contents:hover .p-blog__thumb:before {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+  }
   &__thumb {
     padding-bottom: 66.6666666666666%;
     background-image: url(../../assets/images/whiteboard.jpg);
@@ -59,28 +67,11 @@
     &:before {
       content: "";
       width: 2px;
-      height: 60px;
+      height: 40px;
       background-color: #0097e0;
       position: absolute;
       left: 50%;
-      bottom: -30px;
-      margin-left: -1px;
-      transition: all .5s;
-    }
-  }
-  &__thumbChange {
-    padding-bottom: 66.6666666666666%;
-    background-image: url(../../assets/images/bricks.jpg);
-    background-position: center;
-    position: relative;
-    &:before {
-      content: "";
-      width: 2px;
-      height: 60px;
-      background-color: #0097e0;
-      position: absolute;
-      left: 50%;
-      bottom: -30px;
+      bottom: -20px;
       margin-left: -1px;
       transition: all .5s;
     }
