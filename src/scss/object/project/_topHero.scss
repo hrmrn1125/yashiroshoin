@@ -41,11 +41,15 @@
   position: absolute;
   margin: 0;
 }
+.p-topHero__item li {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+}
 .p-topHero__item img {
   position: absolute;
   width: 73vw;
   height: 554px;
-  object-fit: fill;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -60,17 +64,22 @@
 
 @media only screen and (max-width: 767px) {
   .p-topHero {
-    padding: 150px 0 0;
-    min-height: 400px;
+    &__carousel {
+      margin-left: 0;
+      width: 100%;
+      height: 554px;
+    }
     &__boarder {
       display: none;
     }
-    &__carousel {
-      position: relative;
-      top: auto;
-      left: auto;
-      right: auto;
-      bottom: auto;
-    }
+  }
+  .p-topHero__item li.active {
+    width: 100%;
+  }
+  .p-topHero__item {
+    width: 100%;
+  }
+  .p-topHero__item img {
+    width: 100%;
   }
 }

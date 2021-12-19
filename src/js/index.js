@@ -33,7 +33,7 @@ $(".l-header__spmenu-trigger, .l-sidemenu__closebtn, .l-sidemenu__closeBottom").
 
 // topHero
 $(() => {
-  let $width = "73vw",
+  let $width = "100%",
       $height =  "554px",
       $interval = 5000,
       $fade_speed = 2000;
