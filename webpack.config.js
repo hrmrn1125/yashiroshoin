@@ -19,6 +19,10 @@ module.exports = (env, argv) => {
       path: path.join(__dirname, 'public'),
     },
     plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery'
+      }),
       new CleanWebpackPlugin([
         'public/assets/stylesheets',
         'public/assets/javascripts',

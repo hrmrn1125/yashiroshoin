@@ -48,34 +48,6 @@ $(() => {
   },$interval);
 });
 
-// カルーセル
-let slickOption = {
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  arrows : true,
-  dots : false,
-  autoplay:true,
-  autoplaySpeed:8000,
-  infinite : true,
-  prevArrow : '<div class="slick-prev"></div>',
-  nextArrow : '<div class="slick-next"></div>',
-  adaptiveHeight : false,
-  responsive: [
-    {
-      breakpoint: 1023,
-      settings: {
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-  ]
-};
-
 // go to top
 $(() => {
   const pageTop = $(".p-footer__goToTop");
@@ -214,5 +186,18 @@ $window.scroll(() => {
     } else {
       $(this).removeClass('scrollIn');
     }
+  });
+});
+
+import slick from 'slick-carousel';
+
+// サブカルーセル
+$(document).ready(() => {
+  $(".p-topHero__sub").slick({
+    arrows: true,
+    appendArrows: $(".p-topHero__subImg"),
+    prevArrow : '<div class="p-topHero__prev"></div>',
+		nextArrow : '<div class="p-topHero__next"></div>',
+    infinite: true
   });
 });

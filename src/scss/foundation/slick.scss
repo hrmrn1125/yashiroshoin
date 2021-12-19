@@ -1,161 +1,129 @@
 .slick-slider{
-  padding: 0;
-  overflow: hidden;
+	padding: 0;
+	overflow: hidden;
 }
 .slick-slider .slick-dots{
-  position: static;
-  width: auto;
-  margin-top: 15px;
+	position: static;
+	width: auto;
+	margin-top: 15px;
 }
 .slick-slider .slick-dots li{
-  width: 14px;
-  height: 14px;
-  vertical-align: middle;
-  padding: 0;
-  margin: 0 5px;
+	width: 14px;
+	height: 14px;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0 5px;
 }
 .slick-slider .slick-dots li:before{
-  display: none;
+	display: none;
 }
 .slick-slider .slick-dots li button{
-  border-radius: 100%;
-  width: 14px;
-  height: 14px;
-  padding: 0;
-  border: 1px solid #666666;
-  background-color: #8D8D8D;
-  transition: all .5s;
+	border-radius: 100%;
+	width: 14px;
+	height: 14px;
+	padding: 0;
+	border: 1px solid #666666;
+	background-color: #8D8D8D;
+	transition: all .5s;
 }
 .slick-slider .slick-dots li.slick-active button,
 .slick-slider .slick-dots li button:hover{
-  background-color: #fff;
+	background-color: #fff;
 }
 .slick-slider .slick-dots li button:before{
-  display: none;
+	display: none;
 }
 
 .slick-prev,
 .slick-next{
-  height: 35px;
-  width: 35px;
-  text-align: center;
-  transition: all .5s;
-  z-index: 1;
-  backface-visibility: hidden;
+	height: 35px;
+	width: 35px;
+	text-align: center;
+	transition: all .5s;
+	z-index: 1;
+	backface-visibility: hidden;
 }
 .slick-prev:hover,
 .slick-next:hover{
-  height: 35px;
-  width: 35px;
-  text-align: center;
-  transition: all .5s;
-  z-index: 1;
-  backface-visibility: hidden;
 }
 .slick-prev{
-  left: 0;
+	left: 0;
 }
 .slick-next{
-  right: 0;
+	right: 0;
 }
 .slick-prev:before,
 .slick-next:before{
-  content: '';
-  display: none;
+	content: '';
+	display: none;
 }
 
 .slick-prev.slick-disabled,
 .slick-next.slick-disabled{
-  display: none !important;
+	display: none !important;
 }
 
 .slick-default-arrow{
-  border-radius: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: 6px auto;
-  background-size: 6px auto;
+	border-radius: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: 6px auto;
+	background-size: 6px auto;
 }
 .slick-default-arrow.slick-prev{
-  background-image: url('#{$bgPath}/prev.png');
+	background-image: url(../../images/arrow_6x8_white_left.png);
 }
 .slick-default-arrow.slick-next{
-  background-image: url('#{$bgPath}/next.png');
+	background-image: url(../../images/arrow_6x8_white_right.png);
 }
 .slick-default-arrow:hover{
-  background-color: #2980B4;
+	background-color: #2980B4;
 }
 
 
 .slickBasic{
-  margin: 30px 0;
+	margin: 30px 0;
 }
 .slickBasic .slick-slide{
-  padding: 0 10px;
+	padding: 0 10px;
 }
 .slickBasic .slick-slide .title{
-  font-size: 1.7rem;
-  margin-top: 10px;
+	font-size: 1.7rem;
+	margin-top: 10px;
 }
 .slickBasic .slick-slide .text{
-  margin-top: 10px;
+	margin-top: 10px;
 }
 .slickBasic .slick-slide .class{
-  margin-top: 10px;
+	margin-top: 10px;
 }
 .slickBasic .slick-slide .class span{
-  display: inline-block;
-  background-color: #BFA84A;
-  font-size: 1.3rem;
-  line-height: 1;
-  padding: 5px 5px 3px;
-  border-radius: 3px;
-  margin-right: 5px;
-  color: #fff;
+	display: inline-block;
+	background-color: #BFA84A;
+	font-size: 1.3rem;
+	line-height: 1;
+	padding: 5px 5px 3px;
+	border-radius: 3px;
+	margin-right: 5px;
+	color: #fff;
 }
 .slickBasic .slick-slide .class span.style1{
-  background-color: #4da5dc;
+	background-color: #4da5dc;
 }
 .slickBasic .slick-slide .class span.style2{
-  background-color: #9cc947;
+	background-color: #9cc947;
 }
 
 
 @media only screen and (max-width: 767px) {
-  .slick-prev{
-    left: 5px;
-  }
-  .slick-next{
-    right: 5px;
-  }
-  .slick-prev img,
-  .slick-next img{
-    width: 40px;
-  }
-  .top-eyechatch-sub-slick {
-    max-width: none;
-    margin: -32vw auto 0;
-  }
-  .top-eyechatch-sub-slick-box {
-    padding: 30px 0 0;
-    &:before {
-      bottom: 0;
-      left: 0;
-      right: 0;
-      top: 32vw;
-    }
-  }
-  .top-eyechatch-sub-slick-number {
-    left: 15px;
-  }
-  .top-eyechatch-sub-slick-img {
-    margin: 0 15px;
-  }
-  .top-eyechatch-sub-slick-text {
-    padding: 15px 15px 40px;
-  }
+	.slick-prev{
+		left: 5px;
+	}
+	.slick-next{
+		right: 5px;
+	}
+	.slick-prev img,
+	.slick-next img{
+		width: 40px;
+	}
 }
-
-
-
-
