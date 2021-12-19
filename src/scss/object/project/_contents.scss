@@ -8,7 +8,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 99vw;
+      width: 100%;
       height: 100%;
     }
   }
@@ -47,7 +47,7 @@
       width: 24%;
       height: 79%;
       bottom: 0;
-      right: -18px;
+      right: 0;
       position: absolute;
       z-index: -2;
       background: repeating-linear-gradient(-45deg, #bafa9c, #bafa9c 3px, transparent 3px, transparent 6px);
@@ -62,13 +62,13 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 99vw;
+      width: 100%;
       height: 100%;
     }
   }
   &__blogBoarder {
     width: 100%;
-    height: 28vh;
+    height: 25vh;
     position: absolute;
     background: repeating-linear-gradient( #46ade0, #46ade0 5px, #abd0e2 5px, #abd0e2 10px);
     background-size: 100%;
@@ -166,7 +166,8 @@
       transform-origin: right top;
       transition: transform .5s;
     }
-    &:hover::after {
+    &:hover:after {
+      transform-origin: left top;
       transform: scale(1, 1);
     }
   }
@@ -219,6 +220,18 @@
       transition: all .5s;
       background-color: #1f5ab2;
       z-index: -1;
+    }
+    &:hover {
+      color: #fff;
+      border-color: #3071B7;
+    }
+    &:hover:before {
+      width: 0;
+    }
+    &:hover:after {
+      width: 100%;
+      height: 100%;
+      top: 0;
     }
   }
 }

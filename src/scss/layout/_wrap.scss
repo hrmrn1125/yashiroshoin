@@ -1,11 +1,11 @@
 .l-wrap {
-  width: 100%;
+  width: 100vw;
   padding-bottom: 75px;
   position: relative;
   border-left: 20px solid transparent;
   right: 0;
   color: #4d4d4d;
-  &::before {
+  &:before {
     content: '';
     width: 20px;
     height: 100%;
@@ -17,23 +17,11 @@
   }
 }
 
-@media only screen and (max-width: 1023px) {
-  .l-wrap {
-    width: 100%;
-  }
-}
-
 @media only screen and (max-width: 767px) {
-.l-wrap {
-  border-left-width: 0;
-  &:before {
-    width: 10px;
-    left: -10px;
-  }
-}
-}
-
-@media only screen and (max-width: 450px) {
   .l-wrap {
+    border-left: none;
+    &:before {
+      width: 0;
+    }
   }
 }
