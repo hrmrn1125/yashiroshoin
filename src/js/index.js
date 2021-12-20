@@ -195,9 +195,10 @@ import slick from 'slick-carousel';
 $(document).ready(() => {
   $(".p-topHero__sub").slick({
     arrows: true,
+    appendArrows: $(".p-topHero__subImg"),
     prevArrow : '<div class="p-topHero__prev"></div>',
 		nextArrow : '<div class="p-topHero__next"></div>',
-    infinite: true
+    infinite : true
   });
 });
 
@@ -210,15 +211,10 @@ $(document).ready(() => {
     infinite: true,
     responsive : [
 			{
-				breakpoint: 1024,
+				breakpoint: 1601,
 				settings: {
-					slidesToShow: 2,
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
+          arrows: false,
+					slidesToShow: 3,
 				}
 			},
 			{
@@ -228,6 +224,5 @@ $(document).ready(() => {
 				}
 			},
 		]
-  })
+  });
 });
-

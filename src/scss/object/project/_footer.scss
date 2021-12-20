@@ -1,18 +1,19 @@
 .p-footer {
   &__banner {
-    padding: 75px 50px;
-    overflow: visible;
+    padding: 45px 35px;
     margin: 0 auto;
+    overflow: visible;
   }
   &__bannerBox {
     display: table;
     width: 100%;
-    max-width: 350px;
     margin-right: 15px;
+    max-width: 350px;
+    padding: 0;
+    margin-left: 0;
   }
   &__cell {
     height: 105px;
-    display: table-cell;
     vertical-align: middle;
     background-size: 4px;
     padding: 0;
@@ -20,7 +21,7 @@
     background-color: #fff;
     box-shadow: 5px 5px 10px rgba(0,0,0, 0.3);
     color: inherit;
-    text-align: left;
+    text-align: center;
   }
   &__cell span {
     display: block;
@@ -163,15 +164,6 @@
 
 @media only screen and (max-width: 767px) {
   .p-footer {
-    &__banner {
-      padding: 45px 35px;
-      margin: 0 auto;
-    }
-    &__bannerBox {
-      display: table;
-      width: 100%;
-      margin-right: 15px;
-    }
     &__prev {
       left: 0;
     }
@@ -188,12 +180,6 @@
         border-right: 15px solid transparent;
         border-bottom: 16px solid $colorWhite;
       }
-    }
-    &__banner {
-      padding: 45px 35px;
-    }
-    &__bannerBox {
-      padding: 0;
     }
     &__inner {
       padding: 0 30px;

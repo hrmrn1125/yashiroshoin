@@ -61,7 +61,7 @@
   }
   &__thumb {
     padding-bottom: 66.6666666666666%;
-    background-image: url(../../assets/images/whiteboard.jpg);
+    background-image: url('#{$bgPath}/whiteboard.jpg');
     background-position: center;
     position: relative;
     &:before {
