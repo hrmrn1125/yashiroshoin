@@ -41,11 +41,12 @@
 	text-align: center;
 	transition: all .5s;
 	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
-.slick-prev:hover,
-.slick-next:hover{
-}
+
 .slick-prev{
 	left: 0;
 }
@@ -127,3 +128,4 @@
 		width: 40px;
 	}
 }
+

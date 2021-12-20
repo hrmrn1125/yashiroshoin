@@ -195,9 +195,39 @@ import slick from 'slick-carousel';
 $(document).ready(() => {
   $(".p-topHero__sub").slick({
     arrows: true,
-    appendArrows: $(".p-topHero__subImg"),
     prevArrow : '<div class="p-topHero__prev"></div>',
 		nextArrow : '<div class="p-topHero__next"></div>',
     infinite: true
   });
 });
+
+// フッターバナー
+$(document).ready(() => {
+  $(".p-footer__banner").slick({
+    arrows: true,
+    prevArrow : '<div class="p-footer__prev"></div>',
+		nextArrow : '<div class="p-footer__next"></div>',
+    infinite: true,
+    responsive : [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 501,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		]
+  })
+});
+

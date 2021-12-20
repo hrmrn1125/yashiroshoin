@@ -1,128 +1,36 @@
 .p-footer {
   &__banner {
-    position: relative;
-    display: block;
-    padding: 75px 35px;
-    width: 100%;
+    padding: 75px 50px;
     overflow: visible;
-  }
-  &__bannerList {
-    height: 102px;
-    position: relative;
-    overflow: hidden;
-    display: block;
-    margin: 0;
-    padding: 0;
-    &:before {
-      content: "";
-      display: table;
-    }
+    margin: 0 auto;
   }
   &__bannerBox {
     display: table;
-    width: 295px;
-    height: 102px;
-    min-height: 1px;
-    padding: 15px;
-    float: left;
-    margin-left: 30px;
-    background-color: #fff;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-  &__bannerInner {
-    width: 265px;
-    height: 72px;
-    border: solid;
-    border-color: rgb(209, 209, 209);
-    background-color: #fff7ec;
-    display: flex;
-    position: relative;
-  }
-  &__bannerText {
-    position: absolute;
-    top: 12%;
-    margin-left: 10px;
-    font-size: 18px;
-    color: #412525;
-    font-family: "TsukuARdGothic-Regular";
-  }
-  &__bannerIcon {
-    position: absolute;
-    width: 36px;
-    height: 36px;
-    top: 8.7%;
-    left: 9.8%;
-    background-image: url('#{$bgPath}/footer/search.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    filter: invert(85%) sepia(50%) saturate(0%) hue-rotate(229deg) brightness(160%) contrast(101%);
-    z-index: 6;
-  }
-  &__bannerLogoColor {
-    position: absolute;
-    border-radius: 50%;
-    background-color: #9c7a75;
-    width: 45px;
-    height: 45px;
-    right: 0;
-    top: 15%;
+    width: 100%;
+    max-width: 350px;
     margin-right: 15px;
-    z-index: 5;
   }
-  &__nc {
-    height: 72px;
-    background-color: #0CCAA0;
-    display: flex;
-    flex-direction: column;
+  &__cell {
+    height: 105px;
+    display: table-cell;
+    vertical-align: middle;
+    background-size: 4px;
+    padding: 0;
+    margin: 5px;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.3);
+    color: inherit;
+    text-align: left;
   }
-  &__ncHead {
-    height: 24px;
-    color: #fff;
-    padding-top: 5px;
-    padding-left: 10px;
-    font-size: 14px;
+  &__cell span {
+    display: block;
+    padding: 0;
   }
-  &__ncText {
-    height: 48px;
-    position: relative;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    color: #fff;
-  }
-  &__ncLogo {
-    position: absolute;
-    width: 36px;
-    height: 36px;
-    background-image: url('#{$bgPath}/header/emblem.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: 4px;
-    margin-left: 10px;
-    filter: invert(85%) sepia(50%) saturate(0%) hue-rotate(229deg) brightness(160%) contrast(101%);
-  }
-  &__ncNameWrap {
-    width: auto;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-left: 55px;
-    margin-bottom: 15px;
-  }
-  &__ncNameWrap span:first-of-type {
-    position: absolute;
-    white-space: nowrap;
-    color: #fff;
-    font-size: 21px;
-    top: -5px;
-  }
-  &__ncLowercase {
-    position: absolute;
-    white-space: nowrap;
-    color: #fff;
-    font-size: 8px;
-    margin-top: 26.5px;
+  &__bannerIcon img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    max-height: 105px;;
   }
   &__topList {
     text-align: center;
@@ -255,6 +163,21 @@
 
 @media only screen and (max-width: 767px) {
   .p-footer {
+    &__banner {
+      padding: 45px 35px;
+      margin: 0 auto;
+    }
+    &__bannerBox {
+      display: table;
+      width: 100%;
+      margin-right: 15px;
+    }
+    &__prev {
+      left: 0;
+    }
+    &__next {
+      right: 0;
+    }
     &__goToTop {
       width: 50px;
       height: 50px;
@@ -329,5 +252,42 @@
     &__address {
       margin-top: 70px;
     }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .p-footer__bannerBox {
+    display: table;
+    width: 100%;
+    max-width: 350px;
+  }
+  .p-footer__banner .slick-arrow {
+    position: absolute;
+    background-color: rgb(150, 150, 150);
+    width: 40px;
+    height: 60px;
+    top: 50%;
+    z-index: 1;
+    cursor: pointer;
+    background-position: center;
+    background-size: 12px auto;
+    background-repeat: no-repeat;
+  }
+
+  .p-footer__prev {
+    left: 0;
+    transform: translate(-1px, -50%);
+    background-image: url('#{$bgPath}/prev.png');
+  }
+  .p-footer__next {
+    right: 0;
+    transform: translate(1px, -50%);
+    background-image: url('#{$bgPath}/next.png');
+  }
+  .p-footer__banner .slick-slider {
+    margin: 0 auto;
+  }
+  .p-footer__banner {
+    padding: 45px 85px;
   }
 }
