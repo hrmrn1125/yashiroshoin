@@ -1,9 +1,6 @@
 .p-blog  {
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  position: relative;
+  padding: 50px 0 65px 40px;
 
   &__index {
     margin: 0;
@@ -38,6 +35,9 @@
     &.active {
       display: block;
     }
+  }
+  &__contentsWrap li {
+    margin-right: 25px;
   }
   &__contentsCover {
     display: block;
@@ -131,6 +131,10 @@
   }
 }
 
+.p-blog .slick-list {
+  padding-right: 10%;
+}
+
 .p-blog__contentsWrap ul {
   position: relative;
   overflow: hidden;
@@ -202,6 +206,8 @@
 
 @media only screen and (max-width: 767px) {
   .p-blog {
+    padding: 30px 0 45px 30px;
+
     padding-right: 0;
     &__index {
       margin: 0 5px;
@@ -230,6 +236,9 @@
     &__index li:nth-of-type(2n+1) {
       clear: both;
     }
+    &__contentsWrap li {
+      margin-right: 15px;
+    }
     &__contentsCover {
       display: block;
       width: 40vw;
@@ -243,6 +252,9 @@
       padding: 0;
       margin: 0;
     }
+  }
+  .p-blog .slick-list {
+    padding-right: 20%;
   }
 }
 

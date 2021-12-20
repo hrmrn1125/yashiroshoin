@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 /* eslint-disable no-var */
 /* eslint-disable no-redeclare */
 /* eslint-disable no-undef */
@@ -122,23 +123,7 @@ $window.scroll(() => {
   });
 });
 
-// ブログカテゴリアクティブ
-$(".p-blog__category").on("click",function(){
-  $(".p-blog__category").removeClass("change");
-  $(this).addClass("change");
-});
-
-// blog
-function showContents($index) {
-  let $navIndex = $index.index();
-  $(".p-blog__contentsWrap ul").addClass("p-blog__hidden");
-  $(".p-blog__contentsWrap ul").eq($navIndex).removeClass("p-blog__hidden");
-}
-$(".p-blog__index li").on("click",function() {
-  showContents($(this));
-});
-
-// 定位置に来たらフェードイン
+// 定位置に来たらコンテンツフェードイン
 $window.scroll(() => {
   $(".p-blog").each(function(){
     let $elemPos = $(this).offset().top,
@@ -195,7 +180,7 @@ import slick from 'slick-carousel';
 $(document).ready(() => {
   $(".p-topHero__sub").slick({
     arrows: true,
-    appendArrows: $(".p-topHero__subImg"),
+    // appendArrows: $(".p-topHero__subImg"),
     prevArrow : '<div class="p-topHero__prev"></div>',
 		nextArrow : '<div class="p-topHero__next"></div>',
     infinite : true
@@ -226,39 +211,45 @@ $(document).ready(() => {
   });
 });
 
+// ブログカテゴリをアクティブ化
+$(".p-blog__category").on("click",function(){
+  $(".p-blog__category").removeClass("change");
+  $(this).addClass("change");
+});
 
-// ブログ
+// アクティブカテゴリ連動でコンテンツ表示
+function showContents($index) {
+  let $navIndex = $index.index();
+  $(".p-blog__contentsWrap ul").addClass("p-blog__hidden");
+  $(".p-blog__contentsWrap ul").eq($navIndex).removeClass("p-blog__hidden");
+}
+$(".p-blog__index li").on("click",function() {
+  showContents($(this));
+});
 
+// ブログコンテンツスライドさせる
 $(document).ready(() => {
-  let $slider = $('.p-blog__contentsWrap ul').slick({
+  $('.p-blog__contentsWrap ul').slick ({
     arrows: false,
-    dots: false,
-    infinite: false,
-    centerMode:true,
     responsive : [
-			{
+      {
 				breakpoint: 1600,
 				settings: {
-          arrows: false,
-					slidesToShow: 3,
+					slidesToShow: 3
 				}
 			},
-      {
+			{
 				breakpoint: 768,
 				settings: {
-          arrows: false,
-					slidesToShow: 2,
+					slidesToShow: 2
 				}
 			},
 			{
 				breakpoint: 501,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 1
 				}
-			},
+			}
 		]
-  });
-  $('.p-blog__category change').change(() => {
-    $slider.slick('setPosition');
   });
 });
