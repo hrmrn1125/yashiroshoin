@@ -208,13 +208,12 @@ $(document).ready(() => {
     arrows: true,
     prevArrow : '<div class="p-footer__prev"></div>',
 		nextArrow : '<div class="p-footer__next"></div>',
-    infinite: true,
     responsive : [
 			{
-				breakpoint: 1601,
+				breakpoint: 1800,
 				settings: {
           arrows: false,
-					slidesToShow: 3,
+					slidesToShow: 2,
 				}
 			},
 			{
@@ -224,5 +223,42 @@ $(document).ready(() => {
 				}
 			},
 		]
+  });
+});
+
+
+// ブログ
+
+$(document).ready(() => {
+  let $slider = $('.p-blog__contentsWrap ul').slick({
+    arrows: false,
+    dots: false,
+    infinite: false,
+    centerMode:true,
+    responsive : [
+			{
+				breakpoint: 1600,
+				settings: {
+          arrows: false,
+					slidesToShow: 3,
+				}
+			},
+      {
+				breakpoint: 768,
+				settings: {
+          arrows: false,
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 501,
+				settings: {
+					slidesToShow: 1,
+				}
+			},
+		]
+  });
+  $('.p-blog__category change').change(() => {
+    $slider.slick('setPosition');
   });
 });
