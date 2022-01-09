@@ -49,6 +49,18 @@ $(() => {
   },$interval);
 });
 
+import slick from 'slick-carousel';
+
+// サブカルーセル
+$(document).ready(() => {
+  $(".p-topHero__sub").slick({
+    arrows: true,
+    prevArrow : $('.p-topHero__prev'),
+		nextArrow : $('.p-topHero__next'),
+    infinite : true
+  });
+});
+
 // go to top
 $(() => {
   const pageTop = $(".p-footer__goToTop");
@@ -174,19 +186,6 @@ $window.scroll(() => {
   });
 });
 
-import slick from 'slick-carousel';
-
-// サブカルーセル
-$(document).ready(() => {
-  $(".p-topHero__sub").slick({
-    arrows: true,
-    // appendArrows: $(".p-topHero__subImg"),
-    prevArrow : '<div class="p-topHero__prev"></div>',
-		nextArrow : '<div class="p-topHero__next"></div>',
-    infinite : true
-  });
-});
-
 // フッターバナー
 $(document).ready(() => {
   $(".p-footer__banner").slick({
@@ -211,33 +210,89 @@ $(document).ready(() => {
   });
 });
 
-// ブログカテゴリをアクティブ化
-$(".p-blog__category").on("click",function(){
-  $(".p-blog__category").removeClass("change");
-  $(this).addClass("change");
-});
-
 // アクティブカテゴリ連動でコンテンツ表示
-function showContents($index) {
-  let $navIndex = $index.index();
-  $(".p-blog__contentsWrap ul").addClass("p-blog__hidden");
-  $(".p-blog__contentsWrap ul").eq($navIndex).removeClass("p-blog__hidden");
-}
-$(".p-blog__index li").on("click",function() {
-  showContents($(this));
+$(() => {
+  $('.p-blog .p-blog__category').click(function() {
+    var index = $('.p-blog .p-blog__category').index(this);
+    $('.p-blog .p-blog__category, .p-blog .p-blog__contentsArea').removeClass('active');
+    $(this).addClass('active');
+    $('.p-blog .p-blog__contentsArea').eq(index).addClass('active');
+  });
 });
 
 // ブログコンテンツスライドさせる
 $(document).ready(() => {
-  $('.p-blog__contentsWrap ul').slick ({
+  $(".p-blog__slider1").slick ({
     arrows: false,
+    slidesToShow:3,
+    variableWidth: true,
     responsive : [
-      {
-				breakpoint: 1600,
+			{
+				breakpoint: 768,
 				settings: {
-					slidesToShow: 3
+					slidesToShow: 2
 				}
 			},
+			{
+				breakpoint: 501,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+  });
+});
+
+$(document).ready(() => {
+  $(".p-blog__slider2").slick ({
+    arrows: false,
+    slidesToShow:3,
+    variableWidth: true,
+    responsive : [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 501,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+  });
+});
+
+$(document).ready(() => {
+  $(".p-blog__slider3").slick ({
+    arrows: false,
+    slidesToShow:3,
+    variableWidth: true,
+    responsive : [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2
+				}
+			},
+			{
+				breakpoint: 501,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
+  });
+});
+
+$(document).ready(() => {
+  $(".p-blog__slider4").slick ({
+    arrows: false,
+    slidesToShow:3,
+    variableWidth: true,
+    responsive : [
 			{
 				breakpoint: 768,
 				settings: {

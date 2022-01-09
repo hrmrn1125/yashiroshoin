@@ -31,25 +31,28 @@
     }
   }
   &__contentsWrap {
-    margin-top: 60px;
-    &.active {
-      display: block;
-    }
+    margin-top: 70px;
+    width: 100%;
   }
-  &__contentsWrap li {
+  &__contentsWrap .p-blog__slide li {
     margin-right: 25px;
   }
-  &__contentsCover {
+  &__contentsArea.active .p-blog__contentsCover {
     display: block;
-    width: 40vw;
+    width: 33vw;
+    max-width: 437px;
     height: 100%;
-    padding: 0 30px;
+    margin: 0 30px;
     min-height: 1px
+  }
+  &__contentsArea.active .p-blog__slide {
+    display: flex;
   }
   &__contents {
     display: block;
     background-color: #fff;
     height: 100%;
+    width: 100%;
   }
   &__contents:hover .p-blog__hover {
     opacity: 1;
@@ -61,8 +64,10 @@
   }
   &__thumb {
     padding-bottom: 66.6666666666666%;
+    width: 100%;
     background-image: url('#{$bgPath}/whiteboard.jpg');
     background-position: center;
+    background-size: cover;
     position: relative;
     &:before {
       content: "";
@@ -132,24 +137,19 @@
 }
 
 .p-blog .slick-list {
-  padding-right: 10%;
+  width: 100%;
 }
 
-.p-blog__contentsWrap ul {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  margin: 0;
-  padding: 0;
+.p-blog__contentsArea.active {
+  display: block;
+  left: 0;
 }
-.p-blog__hidden {
-  display: none;
-}
-.p-blog__hidden > li {
+
+.p-blog__contentsArea {
   display: none;
 }
 
-.change {
+.p-blog__category.active {
   display: inline-block;
   margin-right: 30px;
   min-width: 180px;
@@ -181,10 +181,6 @@
 
 @media only screen and (max-width: 1023px) {
 .p-blog {
-  &__contentsWrap {
-    margin-top: 30px;
-    right: 0;
-  }
   &__contentsCover {
     display: block;
     width: 30vw;
@@ -198,17 +194,22 @@
     padding: 0;
     margin: 0;
   }
-  .change:after {
-    display: none;
+  .p-blog__category.active {
+    &:after {
+      display: none;
+    }
   }
-}
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .p-blog {
     padding: 30px 0 45px 30px;
 
-    padding-right: 0;
+    &__contentsWrap {
+      margin-top: 30px;
+      right: 0;
+    }
     &__index {
       margin: 0 5px;
     }
@@ -221,7 +222,6 @@
       padding: 0 10px;
       &:before {
         content: "";
-        width: 180px;
         height: 10px;
         border: 1px solid #ddd;
         position: absolute;
@@ -233,8 +233,17 @@
         right: 10px;
       }
     }
-    &__index li:nth-of-type(2n+1) {
-      clear: both;
+    &__category.active {
+      display: block;
+      width: 50%;
+      float: left;
+      min-width: 0;
+      margin: 0;
+      padding: 0 10px;
+      &::before {
+        width: auto;
+        left: 10px;
+      }
     }
     &__contentsWrap li {
       margin-right: 15px;
@@ -252,9 +261,6 @@
       padding: 0;
       margin: 0;
     }
-  }
-  .p-blog .slick-list {
-    padding-right: 20%;
   }
 }
 

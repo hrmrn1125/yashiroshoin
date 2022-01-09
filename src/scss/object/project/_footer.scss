@@ -17,12 +17,11 @@
     margin: 5px;
     background-color: #fff;
     box-shadow: 5px 5px 10px rgba(0,0,0, 0.3);
-    text-align: center;
+    text-align: start;
   }
   &__cell span {
     display: block;
     padding: 0;
-    margin: 0 auto;
   }
   &__bannerIcon img {
     display: block;
