@@ -4,29 +4,24 @@
     margin: 0;
     overflow: visible;
   }
-  &__bannerBox {
-    display: table;
-    max-width: 350px;
-    margin: 0;
+  &__banner .slick-track {
+    margin-left: 0!important;
+    margin-right: auto!important;
   }
-  &__cell {
-    height: 100%;
-    vertical-align: middle;
-    background-size: 4px;
-    padding: 0;
-    margin: 5px;
-    background-color: #fff;
-    box-shadow: 5px 5px 10px rgba(0,0,0, 0.3);
-    text-align: start;
+  &__bannerBox {
+    float: left;
   }
   &__cell span {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center!important;
     padding: 0;
+    margin-right: 15px;
+    height: 150px;
   }
   &__bannerIcon img {
     display: block;
     width: 100%;
-    height: 100%;
     object-fit: cover;
   }
   &__topList {
@@ -160,6 +155,14 @@
 
 @media only screen and (max-width: 767px) {
   .p-footer {
+    &__banner {
+      padding: 60px 30px;
+    }
+    &__cell span {
+      padding: 0;
+      margin-right: 0;
+      height: 120px;
+    }
     &__prev {
       left: 0;
     }
@@ -179,6 +182,14 @@
     }
     &__inner {
       padding: 0 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .p-footer {
+    &__banner {
+      padding: 50px 30px;
     }
   }
 }
@@ -238,38 +249,39 @@
 }
 
 @media only screen and (max-width: 500px) {
-  .p-footer__bannerBox {
-    display: table;
-    width: 100%;
-    max-width: 350px;
-  }
-  .p-footer__banner .slick-arrow {
-    position: absolute;
-    background-color: rgb(150, 150, 150);
-    width: 40px;
-    height: 60px;
-    top: 50%;
-    z-index: 1;
-    cursor: pointer;
-    background-position: center;
-    background-size: 12px auto;
-    background-repeat: no-repeat;
-  }
-
-  .p-footer__prev {
-    left: 0;
-    transform: translate(-1px, -50%);
-    background-image: url('#{$bgPath}/prev.png');
-  }
-  .p-footer__next {
-    right: 0;
-    transform: translate(1px, -50%);
-    background-image: url('#{$bgPath}/next.png');
-  }
-  .p-footer__banner .slick-slider {
-    margin: 0 auto;
-  }
-  .p-footer__banner {
-    padding: 45px 50px;
+  .p-footer {
+    &__banner {
+      padding: 50px;
+    }
+    &__cell span {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+    }
+    &__banner .slick-arrow {
+      position: absolute;
+      background-color: rgb(150, 150, 150);
+      width: 40px;
+      height: 60px;
+      top: 50%;
+      z-index: 1;
+      cursor: pointer;
+      background-position: center;
+      background-size: 12px auto;
+      background-repeat: no-repeat;
+    }
+    &__prev {
+      left: 0;
+      transform: translate(-1px, -50%);
+      background-image: url('#{$bgPath}/prev.png');
+    }
+    &__next {
+      right: 0;
+      transform: translate(1px, -50%);
+      background-image: url('#{$bgPath}/next.png');
+    }
+    &__banner .slick-slider {
+      margin: 0 auto;
+    }
   }
 }

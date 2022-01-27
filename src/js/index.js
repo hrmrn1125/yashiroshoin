@@ -193,21 +193,52 @@ $(document).ready(() => {
     prevArrow : '<div class="p-footer__prev"></div>',
 		nextArrow : '<div class="p-footer__next"></div>',
     responsive : [
-			{
+      {
 				breakpoint: 1800,
+				settings: {
+          arrows: false,
+					slidesToShow: 4,
+				}
+			},
+      {
+				breakpoint: 1119,
+				settings: {
+          arrows: false,
+					slidesToShow: 3,
+				}
+			},
+			{
+				breakpoint: 767,
 				settings: {
           arrows: false,
 					slidesToShow: 2,
 				}
 			},
 			{
-				breakpoint: 501,
+				breakpoint: 500,
 				settings: {
 					slidesToShow: 1,
 				}
 			},
 		]
   });
+});
+
+$(() => {
+	function sliderSetting(){
+    var width = $(window).width();
+      if(width <= 500){
+        $('.p-footer__banner').slick();
+      } else {
+        $('.p-footer__banner').unslick();
+      }
+	}
+	sliderSetting();
+
+	$(window).responsive(() => {
+    sliderSetting();
+    slider.slick('setPosition');
+	});
 });
 
 // アクティブカテゴリ連動でコンテンツ表示
@@ -268,7 +299,6 @@ $(document).ready(() => {
 $(document).ready(() => {
   $(".p-blog__slider3").slick ({
     arrows: false,
-    slidesToShow:3,
     variableWidth: true,
     responsive : [
 			{
