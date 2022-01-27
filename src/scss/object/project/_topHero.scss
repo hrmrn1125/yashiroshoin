@@ -29,7 +29,6 @@
 }
 
 .p-topHero__carousel > ul.p-topHero__item {
-  width: calc(100% * 4);
   display: flex;
   position: absolute;
 }
@@ -47,13 +46,23 @@
 }
 .p-topHero__item li {
   position: absolute;
-  background-size: cover;
-  background-position: center;
+  width: 77vw;
+  height: 554px;
 }
-.p-topHero__item img {
+.p-topHero__item li img {
   position: absolute;
   width: 77vw;
   height: 554px;
+}
+.p-topHero__item li.p-topHero__slide01 {
+  background-image: url('#{$bgPath}topHero.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.p-topHero__item li.p-topHero__slide02 {
+  background-image: url('#{$bgPath}lane.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -83,10 +92,6 @@
     height: 100%;
   }
   .p-topHero__item {
-    width: 100%;
-    height: 100%;
-  }
-  .p-topHero__item img {
     width: 100%;
     height: 100%;
   }
