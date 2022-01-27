@@ -22,14 +22,24 @@ $(() => {
   });
 });
 
-// サイドメニュー
+// ハンバーガーメニュー
 $(".l-header__spmenu-trigger, .l-sidemenu__closebtn, .l-sidemenu__closeBottom").on('click',() => {
   let trg = $(".l-header__spmenu-trigger");
   if(!$(".l-sidemenu").is(':animated')){
       trg.toggleClass('active');
       $('html').toggleClass('open');
+      $('.back').toggleClass('open');
   }
   return false;
+});
+
+// ハンバーガーメニューの背景クリック時
+$(".back").on('click', function(){
+  if($(this).hasClass('open')) {
+    $(this).removeClass('open');
+    $(".l-header__spmenu-trigger").removeClass('active');
+    $('html').removeClass('open');
+  }
 });
 
 // topHero

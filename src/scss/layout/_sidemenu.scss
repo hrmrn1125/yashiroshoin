@@ -3,125 +3,161 @@ html.open .l-sidemenu {
   background-color: #0097e0;
 }
 
-@media only screen and (max-width: 1023px) {
-.l-sidemenu {
-  background-color: #0097e0;
-  padding: 0;
-  background-color: #000;
-  width: 280px;
+.back {
   position: fixed;
-  box-sizing: border-box;
-  overflow: auto;
   top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 500;
-  backface-visibility: hidden;
-  margin-right: -300px;
-  transition: all .5s;
-
-  &__inner {
-    padding: 60px 15px;
-  }
-  &__closebtn {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    &:before {
-      content: "";
-      position: absolute;
-      left: 3px;
-      width: 34px;
-      height: 2px;
-      background-color: #fff;
-      border-radius: 1px;
-      transform: rotate(-45deg);
-      top: 50%;
-      margin-top: -1px;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      left: 3px;
-      width: 34px;
-      height: 2px;
-      background-color: #fff;
-      border-radius: 1px;
-      transform: rotate(45deg);
-      top: 50%;
-      margin-top: -1px;
-    }
-  }
-  &__main {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-  }
-  &__main > li {
-    border-top: 1px solid rgba(255,255,255,0.3);
-    list-style: none;
-  }
-  &__main > li > a {
-    padding: 15px;
-  }
-  &__main a {
-    display: block;
-    color: #fff;
-  }
-  &__subList {
-    padding-bottom: 15px;
-  }
-  &__subList a {
-    padding: 10px 10px 10px 30px;
-    font-size: 14px;
-  }
-  &__sub {
-    padding: 30px 15px;
-  }
-  &__subIndex {
-    list-style: none;
-  }
-  &__sub a {
-    display: block;
-    font-size: 14px;
-    color: #fff;
-    padding: 10px 10px 10px 0;
-  }
-  &__bannerItem a {
-    display: block;
-    color: #fff;
-    padding: 14px 10px;
-    background-color: rgba(255, 255, 255, 0.4);
-  }
-  &__bannerItem + .l-sidemenu__bannerItem {
-    margin-top: 4px;
-  }
-  &__bannerWrap + .l-sidemenu__school {
-    margin-top: 30px;
-  }
-  &__school a {
-    display: block;
-    padding: 15px;
-    color: #fff;
-    border: 1px solid #fff;
-  }
-  &__school li + li {
-    margin-top: 5px;
-  }
-  &__closeBottom {
-    border-radius: 5px;
-    background-color: #f5f5f5;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
-    cursor: pointer;
-  }
+  left: 0;
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
+
+.back.open {
+  width: 100vw;
+  height: 100%;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 1023px) {
+  .l-sidemenu {
+    background-color: #0097e0;
+    padding: 0;
+    background-color: #000;
+    width: 280px;
+    position: fixed;
+    box-sizing: border-box;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 500;
+    backface-visibility: hidden;
+    margin-right: -300px;
+    transition: all .5s;
+
+    &__inner {
+      padding: 60px 15px;
+    }
+    &__closebtn {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 3px;
+        width: 34px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 1px;
+        transform: rotate(-45deg);
+        top: 50%;
+        margin-top: -1px;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: 3px;
+        width: 34px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 1px;
+        transform: rotate(45deg);
+        top: 50%;
+        margin-top: -1px;
+      }
+    }
+    &__main {
+      display: block;
+      list-style-type: disc;
+    }
+    &__main > li {
+      border-top: 1px solid rgba(255,255,255,0.3);
+      list-style: none;
+    }
+    &__main > li > a {
+      padding: 15px;
+    }
+    &__main a {
+      display: block;
+      color: #fff;
+    }
+    &__subList {
+      padding-bottom: 15px;
+    }
+    &__subList a {
+      padding: 10px 10px 10px 30px;
+      font-size: 14px;
+      transition: all .5s;
+      &:hover {
+        background-color: rgba(255,255,255, 0.4);
+      }
+    }
+    &__sub {
+      padding: 30px 0;
+    }
+    &__subIndex {
+      list-style: none;
+    }
+    &__sub a {
+      display: block;
+      font-size: 14px;
+      color: #fff;
+      padding: 10px 15px;
+      transition: all .5s;
+      &:hover {
+        background-color: rgba(255,255,255, 0.4);
+      }
+    }
+    &__bannerItem a {
+      display: block;
+      color: #fff;
+      padding: 14px 10px;
+      background-color: rgba(255, 255, 255, 0.4);
+      transition: all .5s;
+      &:hover {
+        background-color: #3268D9;
+      }
+    }
+    &__bannerItem + .l-sidemenu__bannerItem {
+      margin-top: 4px;
+    }
+    &__bannerWrap + .l-sidemenu__school {
+      margin-top: 30px;
+    }
+    &__school a {
+      display: block;
+      padding: 15px;
+      color: #fff;
+      border: 1px solid #fff;
+      transition: all .5s;
+      &:hover {
+        background-color: #3268D9;
+      }
+    }
+    &__school li + li {
+      margin-top: 5px;
+    }
+    &__closeBottom {
+      border-radius: 5px;
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+      cursor: pointer;
+      transition: all .5s;
+      &:hover {
+        color: #fff;
+        background-color: #3268D9;
+      }
+    }
+  }
 }
