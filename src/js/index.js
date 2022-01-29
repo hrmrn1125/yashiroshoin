@@ -269,9 +269,9 @@ $(document).ready(() => {
     variableWidth: true,
     responsive : [
 			{
-				breakpoint: 768,
+				breakpoint: 1470,
 				settings: {
-					slidesToShow: 2
+					slidesToShow: 2,
 				}
 			},
 			{
@@ -291,7 +291,7 @@ $(document).ready(() => {
     variableWidth: true,
     responsive : [
 			{
-				breakpoint: 768,
+				breakpoint: 1470,
 				settings: {
 					slidesToShow: 2
 				}
@@ -309,10 +309,11 @@ $(document).ready(() => {
 $(document).ready(() => {
   $(".p-blog__slider3").slick ({
     arrows: false,
+    slidesToShow:3,
     variableWidth: true,
     responsive : [
 			{
-				breakpoint: 768,
+				breakpoint: 1470,
 				settings: {
 					slidesToShow: 2
 				}
@@ -334,7 +335,7 @@ $(document).ready(() => {
     variableWidth: true,
     responsive : [
 			{
-				breakpoint: 768,
+				breakpoint: 1470,
 				settings: {
 					slidesToShow: 2
 				}
