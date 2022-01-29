@@ -3,7 +3,7 @@ html.open .l-sidemenu {
   background-color: #0097e0;
 }
 
-.back {
+.l-sidemenu__back {
   position: fixed;
   top: 0;
   left: 0;
@@ -17,7 +17,7 @@ html.open .l-sidemenu {
   transition: opacity 0.5s;
 }
 
-.back.open {
+.l-sidemenu__back.open {
   width: 100vw;
   height: 100%;
   opacity: 1;
