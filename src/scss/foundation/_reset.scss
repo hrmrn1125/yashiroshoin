@@ -46,6 +46,7 @@ th,
 td {
 	margin:0;
 	padding:0;
+  outline: none;
 }
 table {
 	border-collapse:collapse;
@@ -154,4 +155,8 @@ input[type="radio"] {
 
 textarea {
   resize: none;
+}
+
+*:focus {
+  outline: none;
 }
